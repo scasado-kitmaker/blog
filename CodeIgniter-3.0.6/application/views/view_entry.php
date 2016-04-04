@@ -19,6 +19,9 @@
                 <?=form_textarea('comment')?>
                 <?=form_submit('submit','Send')?>
                 <?=form_close()?>
+                header('Location: http://localhost/blog/CodeIgniter-3.0.6/index.php/blog/view/1');
+
+
         <?php endif; ?>
         <?php
         if(!empty($comments)){

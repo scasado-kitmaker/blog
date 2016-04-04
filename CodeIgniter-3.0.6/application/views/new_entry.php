@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>New Entry</title>       
+	<title>View Entries</title>    
 </head>
 <body>
 	<?php include('menu.php');?>
-	<?=form_open(base_url().'blog/insert_entry/')?>
-	<p>Title: <?=form_input('title')?></p>
-	<p>Content: <?=form_textarea('content')?></p>
-	<p>Tags:<?=form_input('tags')?> (comma separated)</p>
-	<?=form_submit('submit', 'Insert')?>
+	<?php if (!empty($entries)) : ?>
+		<?php foreach($entries as $entry) : ?>
+			<h2><?=$entry->title?></h2>
+			Author: <?=$entry->author?><br />
+			Date: <?=$entry->date?><hr />
+		<?php endforeach; ?>
+	<?php else : ?>
+		<h1>No entries</h1>
+	<?php endif; ?>
 </body>
 </html>

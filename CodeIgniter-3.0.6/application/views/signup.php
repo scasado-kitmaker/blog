@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php include('menu.php');?>
-	<?=form_open(base_url().'users/register/')?>
+	<?=form_open(base_url().'index.php/users/register/')?>
 	<p>Name: <?=form_input('name')?></p>
 	<p>Username: <?=form_input('username')?></p>
 	<p>Password: <?=form_password('password')?></p>

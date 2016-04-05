@@ -29,7 +29,7 @@
                             <?=anchor(base_url().'index.php/blog/delete/'.$entry->id, $delete)?>
                     </h3>
                     Author: <?=$entry->author?><br />
-                    Date: <?=convertDateTimetoTimeAgo($entry->date)?><hr />
+                    Date: <?=$entry->date?><hr />
             <?php endforeach; ?>
     <?php else : ?>
         <h1>No entries</h1>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel = "stylesheet" type = "text/css" 
+   href = 'C:\wamp\www\blog\CodeIgniter-3.0.6\application\css/style.css'>
+
         <meta charset="utf-8">
         <title>View Entries</title>     
 </head>
@@ -29,7 +32,7 @@
                             <?=anchor(base_url().'index.php/blog/delete/'.$entry->id, $delete)?>
                     </h3>
                     Author: <?=$entry->author?><br />
-                    Date: <?=convertDateTimetoTimeAgo($entry->date)?><hr />
+                    Date: <?=$entry->date?><hr />
             <?php endforeach; ?>
     <?php else : ?>
         <h1>No entries</h1>

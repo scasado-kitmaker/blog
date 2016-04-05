@@ -6,16 +6,16 @@ class Blog extends CI_Controller {
         }
         
         public function index(){
-           $data['entries'] = $this->blog_model->getEntries();  
+             $data['entries'] = $this->blog_model->getEntries();  
 
-           if ($this->session->userdata('is_logged_in')) {
-                  $username = $this->session->userdata('username');
-                  $data['my_entries'] = $this->blog_model->getMyEntries($username);  
-          }
+             if ($this->session->userdata('is_logged_in')) {
+              $username = $this->session->userdata('username');
+              $data['my_entries'] = $this->blog_model->getMyEntries($username);  
+      }
 
-          $this->load->view('show_entries', $data);
-  }
-  public function entry(){
+      $this->load->view('show_entries', $data);
+}
+public function entry(){
         $this->load->view('new_entry');
 }
 
@@ -50,10 +50,10 @@ public function comment(){
         redirect(base_url().'index.php/blog/view/'.$id_blog);
 }
 public function edit() {
-      $id_entry = $this->uri->segment(3);
-      $data['entry_data'] = $this->blog_model->getEntryData($id_entry);  
+  $id_entry = $this->uri->segment(3);
+  $data['entry_data'] = $this->blog_model->getEntryData($id_entry);  
 
-      $this->load->view('edit_entry', $data);
+  $this->load->view('edit_entry', $data);
 }
 public function update_entry()
 {
@@ -75,6 +75,13 @@ public function delete(){
     $this->blog_model->deleteEntry($id_entry);
 
     redirect(base_url());
+}
+
+public function MyEntries(){
+    $checkAuthor=$this->session->userdata('name');   
+    $data['entries'] = $this->blog_model->getUserEntry($checkAuthor);   
+    $this->load->view('show_user_entries', $data);
+
 }
 
 }

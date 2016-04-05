@@ -55,4 +55,10 @@ class Blog_model extends CI_Model {
 	{
 		return $this->db->delete('entries', array('id' => $id)); 
 	}
+
+	public function getUserEntry($checkAuthor){
+		$this->db->where('author',$checkAuthor);
+		return $this->db->get('entries')->result();
+
+	}
 }

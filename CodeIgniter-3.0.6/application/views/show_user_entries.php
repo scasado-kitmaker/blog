@@ -22,7 +22,7 @@
                             $delete = ' ';
                     }
                     
-                    ?>                    
+                    ?>
                     <h2><?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title)?></h2>
                     <h3>
                             <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit)?>

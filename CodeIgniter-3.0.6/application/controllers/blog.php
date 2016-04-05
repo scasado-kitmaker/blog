@@ -40,6 +40,6 @@ class Blog extends CI_Controller {
                         'date' => date('Y-m-d H:i:s')
                         );
                 $this->blog_model->insert('comments', $comment);
-                redirect(base_url().'blog/view/'.$id_blog);
+                redirect(base_url().'index.php/blog/view/'.$id_blog);
         }
 }

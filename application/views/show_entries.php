@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel = "stylesheet" type = "text/css" 
-   href = 'C:\wamp\www\blog\CodeIgniter-3.0.6\application\css/style.css'>
-
         <meta charset="utf-8">
-        <title>View Entries</title>     
+        <title>View Entries</title> 
+        <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+          
 </head>
 <body>
         <?php include('menu.php');?>
+
+
 
         <?php if (!empty($entries)) : ?>
                 <?php foreach($entries as $entry) : ?>
                     <?php 
                     if (isset($my_entries) && in_array($entry->id, $my_entries)) {
+
                             $edit   = 'edit'; 
                             $delete = 'delete';
                     } elseif ($this->session->userdata('name')=='admin') {
@@ -26,8 +28,8 @@
                     }
                     
                     ?>                    
-                    <h2><?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title)?></h2>
-                    <h3>
+                    <h2><?=anchor(base_url().'index.php/CodeIgniter-3.0.6/view/'.$entry->id,$entry->title)?></h2>
+                    <h3 style="font-family:verdana">
                             <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit)?>
                             <?=anchor(base_url().'index.php/blog/delete/'.$entry->id, $delete)?>
                     </h3>

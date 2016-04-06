@@ -5,10 +5,10 @@
     <title>View Entries</title>     
 </head>
 <body>
-    <?php include('menu.php');?>
-    <div class="show_entries">
+   <div class="show_entries">
+   <?php include('menu.php');?>    
 
-      <?php if (!empty($entries)) : ?>
+    <?php if (!empty($entries)) : ?>
         <?php foreach($entries as $entry) : ?>
             <?php 
             if (isset($my_entries) && in_array($entry->id, $my_entries)) {

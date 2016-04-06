@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8">
-        <title>New Entry</title>       
+	<meta charset="utf-8">
+	<title>New Entry</title>       
 </head>
 <body>
-        <?php include('menu.php');?>
-        <?=form_open(base_url().'index.php/blog/insert_entry/')?>
-        <p>Title: <?=form_input('title')?></p>
-        <p>Content: <?=form_textarea('content')?></p>
-        <p>Tags:<?=form_input('tags')?> (comma separated)</p>
-        <?=form_submit('submit', 'Insert')?>
+<div class="show_entries">
+		<?php include('menu.php');?>
+		<?=form_open(base_url().'index.php/blog/insert_entry/')?>
+		<p>Título: <?=form_input('title')?></p>
+		<p>Contenido:</p>
+		<p><?=form_textarea('content','','class="editTextArea"')?></p>
+		<p>Etiquetas:<?=form_input('tags')?> (Separadas por coma)</p>
+		<?=form_submit('submit', 'Publicar')?>
+	</div>
 </body>
 </html>

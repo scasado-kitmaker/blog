@@ -7,43 +7,49 @@
 </head>
 
 <body>
-	<div id="header">
-		<h1>Blog</h1>
+	<div id="header">		
+		<img  src="http://localhost/blog/images/header.png">
 	</div>
 
-	<div class="menubotones">
-	<?php
+	<div class="menuBotones">
 
-	if ($this->session->userdata('is_logged_in'))
+
+
+
+		<?php
+
+		if ($this->session->userdata('is_logged_in'))
 		//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
 
-		echo anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout','class="btnLogin"');
+			echo anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout','class="btnLogin"');
 
 
-	elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'validate'))
+		elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'validate'))
 		//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
-		echo anchor(base_url().'index.php/users/signup/',' Sign Up ','class="btnLogin"');
+			echo anchor(base_url().'index.php/users/signup/',' Sign Up ','class="btnLogin"');
 
 
 
-	else
+		else
 		//echo anchor(base_url().'index.php/users/signin/','Sign In').' | ';
-		echo anchor(base_url().'index.php/users/signin/',' Entrar ','class="btnLogin"'  );
-	if ($this->session->userdata('is_logged_in'))
+			echo anchor(base_url().'index.php/users/signin/',' Entrar ','class="btnLogin"'  );
+		if ($this->session->userdata('is_logged_in'))
 		//echo anchor(base_url().'index.php/blog/entry/', 'New Entry');
-		echo anchor(base_url().'index.php/blog/entry/',' Nueva entrada ','class="btnLogin"');
-	if ($this->session->userdata('is_logged_in'))
-		echo ' ';
+			echo anchor(base_url().'index.php/blog/entry/',' Nueva entrada ','class="btnNuevaEntrada"');
+		if ($this->session->userdata('is_logged_in'))
+			echo ' ';
 	//echo anchor(base_url(), 'All Entries');
-	echo anchor(base_url().' ',' Todas las entradas ','class="btnLogin"');
-	if ($this->session->userdata('is_logged_in'))
-		echo ' ';
-	if ($this->session->userdata('is_logged_in'))
+		echo anchor(base_url().' ',' Todas las entradas ','class="btnMostrar"');
+		if ($this->session->userdata('is_logged_in'))
+			echo ' ';
+		if ($this->session->userdata('is_logged_in'))
 		//echo anchor(base_url().'index.php/blog/MyEntries/', 'My Entries');
-		echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="btnLogin"');
-	
-	echo '<hr />';
-	?>
+			echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="btnMisEntradas"');
+
+		
+		?>
 	</div>
+	<hr />
+
 
 </body>

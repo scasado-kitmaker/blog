@@ -5,11 +5,13 @@
 	<title>Sign Up</title> 
 </head>
 <body>
+<div class="show_entries">
 	<?php include('menu.php');?>
 	<?=form_open(base_url().'index.php/users/register/')?>
 	<p>Name: <?=form_input('name')?></p>
 	<p>Username: <?=form_input('username')?></p>
 	<p>Password: <?=form_password('password')?></p>
 	<?=form_submit('submit', 'Register')?>
+	</div>
 </body>
 </html>

@@ -29,8 +29,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 4%;
@@ -67,8 +66,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
@@ -104,8 +102,7 @@ body {
   font-family: Arial;
   color: #ffffff;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
@@ -141,16 +138,14 @@ body {
   font-family: Arial;
   color: #ffffff;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
+ 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 40px;
   padding-right: 5%;
   
   font-size: 20px;
-  text-decoration: none;
-  
+  text-decoration: none;  
   
 }
 
@@ -190,6 +185,7 @@ body {
 .show_entries{
   /*Damos formato al texto de la vista que nos muestra la entradas del usuario
   que tiene iniciada la sesión*/
+  text-decoration: none;
   font-family: fuentePrincipal;
   text-align: justify;
   font-size: 20px;
@@ -205,7 +201,10 @@ body {
 
 }
 .tituloShowEntries{
-  text-align: center;
+  text-align: left;
+  text-decoration: none;
+  font-family: fuentePrincipal;
+  font-size: 40px;
 }
 
 input[type=password] {
@@ -243,6 +242,7 @@ input[type=text], select {
   font-size: 20px;
 }
 input[type=content], select {
+
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -259,6 +259,7 @@ input[type=content], select {
   font-family: fuentePrincipal;
   font-size: 20px;
   width: 100%;
+  height: 150px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;

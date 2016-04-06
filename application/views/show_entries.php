@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>View Entries</title> 
     <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
 
 </head>
 <body>

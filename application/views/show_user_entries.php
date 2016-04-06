@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>View Entries</title>     
+    <title>View Entries</title>    
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/> 
 </head>
 <body>
    <div class="show_entries">

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sign Up</title> 
+	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
 </head>
 <body>
 <div class="show_entries">

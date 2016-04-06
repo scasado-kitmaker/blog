@@ -4,6 +4,8 @@
 	<meta charset="utf-8">       
 	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
 	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+	
+
 </head>
 
 <body>
@@ -45,7 +47,7 @@
 		if ($this->session->userdata('is_logged_in'))
 		//echo anchor(base_url().'index.php/blog/MyEntries/', 'My Entries');
 			echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="btnMisEntradas"');
-
+			echo anchor(base_url().'index.php/blog/datatables/',' datatables ','class="btnLogin"');
 		
 		?>
 	</div>

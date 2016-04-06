@@ -83,5 +83,8 @@ public function MyEntries(){
     $this->load->view('show_user_entries', $data);
 
 }
+public function datatables(){
+    $this->load->view('datatables');
+}
 
 }

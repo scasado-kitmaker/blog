@@ -1,11 +1,20 @@
 
 body { 
    background: #3498db;
- 
- 
+   /* Añade color de fondo al body */
+
+  
+}
+
+@font-face {
+    font-family: fuentePrincipal;
+    src: url('http://localhost/blog/fonts//calibri.ttf');
+    /* Importa la fuente que usaremos en el blog */
 }
 
 .btnLogin {
+  /* Da un formato a los botones que estan presentes en el menu superiro */
+
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -17,12 +26,13 @@ body {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  margin-top: 1500px;
-  margin-bottom: 1500px;
+  
   position: relative;
 }
 
 .btnLogin:hover {
+  /* Da un formato a los botones que estan presentes en el menu superior cuando se
+   pasa el raton por encima de estos para resaltar el botón que se esta seleccionado */
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -31,4 +41,52 @@ body {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+.viewContenido{
+  /* Damos formato al texto en la view que nos muestra el contenido
+  de la entrada seleccionada */
+  font-family: fuentePrincipal;
+  text-align: justify;
+  font-size: 20px;
+  border-left: 30px;
+  border-right: 30px;
+}
+.enviarComentario{
+  /* damos formato a el formulario usado para enviar los comentarios */
+  font-family: fuentePrincipal
+  text-align:justify;
+  font-size: 20px;
+  border-left: 30px;
+  border-right: 30px;
+}
+.menuBotones{
+  margin-left: 400px;
+  margin-right: 400px;
+}
+.show_entries{
+  /*Damos formato al texto de la vista que nos muestra la entradas del usuario
+  que tiene iniciada la sesión*/
+  font-family: fuentePrincipal;
+  text-align: justify;
+  font-size: 20px;
+  border-left: 30px;
+  border-right: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.cabecera{
+  text-align: center;
+  font-family: fuentePrincipal
+  font-size:50px;
 
+}
+.tituloShowEntries{
+  text-align: center;
+}
+
+
+#header {
+    background-color:#3498db;
+    color:black;
+    text-align:center;
+    padding:5px;
+}

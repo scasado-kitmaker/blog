@@ -10,17 +10,17 @@
         <?php include('menu.php');?>
 
 
-
+        <div class="show_entries">
         <?php if (!empty($entries)) : ?>
                 <?php foreach($entries as $entry) : ?>
                     <?php 
                     if (isset($my_entries) && in_array($entry->id, $my_entries)) {
 
-                            $edit   = 'edit'; 
-                            $delete = 'delete';
+                            $edit   = 'Editar'; 
+                            $delete = 'Borrar';
                     } elseif ($this->session->userdata('name')=='admin') {
-                            $edit   = 'edit'; 
-                            $delete = 'delete';
+                            $edit   = 'Editar'; 
+                            $delete = 'Borrar';
                     }
                     else {
                             $edit   = ' ';
@@ -28,16 +28,18 @@
                     }
                     
                     ?>                    
-                    <h2><?=anchor(base_url().'index.php/CodeIgniter-3.0.6/view/'.$entry->id,$entry->title)?></h2>
+                    <h2 class="tituloShowEntries"><?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title)?></h2>
+                    <p><?=$entry->content?></p>
                     <h3 style="font-family:verdana">
                             <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit)?>
                             <?=anchor(base_url().'index.php/blog/delete/'.$entry->id, $delete)?>
                     </h3>
-                    Author: <?=$entry->author?><br />
-                    Date: <?=$entry->date?><hr />
+                    Autor: <?=$entry->author?><br />
+                    Fecha: <?=$entry->date?><hr />
             <?php endforeach; ?>
     <?php else : ?>
-        <h1>No entries</h1>
+        </div>
+        <h1>No existe ninguna entrada</h1>
 <?php endif; ?>
 </body>
 </html>

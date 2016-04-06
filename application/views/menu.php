@@ -7,15 +7,18 @@
 </head>
 
 <body>
+	<div id="header">
+		<h1>Blog</h1>
+	</div>
 
-
+	<div class="menubotones">
 	<?php
 
 	if ($this->session->userdata('is_logged_in'))
 		//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
 
 		echo anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout','class="btnLogin"');
-			
+
 
 	elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'validate'))
 		//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
@@ -41,5 +44,6 @@
 	
 	echo '<hr />';
 	?>
+	</div>
 
 </body>

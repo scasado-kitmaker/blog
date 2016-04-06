@@ -83,8 +83,16 @@ public function MyEntries(){
     $this->load->view('show_user_entries', $data);
 
 }
-public function datatables(){
-    $this->load->view('datatables');
+public function userDatatables(){
+    $data['user_datatables']=$this->blog_model->getUserDatatables();
+    $data['comments_datatables']=$this->blog_model->getCommentsDatatables();
+    $data['entries_datatables']=$this->blog_model->getEntriesDatatables();
+
+    $this->load->view('datatables',$data);
 }
+/*public function commentsDatatables(){
+    $data['comments_datatables']=$this->blog_model->getCommentsDatatables();
+    $this->load->view('datatables',$data);
+}*/
 
 }

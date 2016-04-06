@@ -61,4 +61,13 @@ class Blog_model extends CI_Model {
 		return $this->db->get('entries')->result();
 
 	}
+	public function getUserDatatables(){
+		return $this->db->get('users')->result();
+	}
+	public function getCommentsDatatables(){
+		return $this->db->get('comments')->result();
+	}
+	public function getEntriesDatatables(){
+		return $this->db->get('entries')->result();
+	}
 }

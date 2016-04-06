@@ -47,11 +47,15 @@
 		if ($this->session->userdata('is_logged_in'))
 		//echo anchor(base_url().'index.php/blog/MyEntries/', 'My Entries');
 			echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="btnMisEntradas"');
-			echo anchor(base_url().'index.php/blog/datatables/',' datatables ','class="btnLogin"');
+
+		if ($this->session->userdata('name')=='admin') {
+			echo anchor(base_url().'index.php/blog/userDatatables/',' datatables ','class="btnLogin"');
+		}
+		
 		
 		?>
 	</div>
-	<hr />
+	<hr class="style13"/>
 
 
 </body>

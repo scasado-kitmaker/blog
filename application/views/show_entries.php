@@ -37,7 +37,7 @@
                     <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, '<img  src="http://localhost/blog/images/edit.png">')?>
                 <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,'<img  src="http://localhost/blog/images/delete.png">')?>
                 </h3>
-<hr />
+                <hr class="style13"/>
             <?php endforeach; ?>
         <?php else : ?>
         </div>

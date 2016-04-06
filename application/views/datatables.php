@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>View Entries</title> 
     <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+    <link href='http://localhost/blog/css/styleTables.css' rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=d9c2c842fd3bd3ec7e90423dc6c620c1">
-    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">
+
+    <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">-->
+
     <style type="text/css" class="init">
-    
+
     </style>
 
 
@@ -28,11 +30,25 @@
     <script type="text/javascript" class="init">
 
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#usuarios').DataTable();
         } );
 
     </script>
 
+ <script type="text/javascript" class="init">
+
+        $(document).ready(function() {
+            $('#comentarios').DataTable();
+        } );
+
+    </script>
+     <script type="text/javascript" class="init">
+
+        $(document).ready(function() {
+            $('#entradas').DataTable();
+        } );
+
+    </script>
 </head>
 <body>
 
@@ -40,14 +56,14 @@
         <?php include('menu.php');?>
         <br/>
         <br/>
-
-        <table id="example" class="display" cellspacing="0" width="100%">
+        <h1>Usuarios</h1>
+        <table id="usuarios" class="display" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th>id</th>
                     <th>name</th>
                     <th>username</th>
-                    <th>password</th>                    
+                    <th>password Hash MD5</th>                    
                 </tr>
             </thead>
             <tfoot>
@@ -55,27 +71,121 @@
                     <th>id</th>
                     <th>name</th>
                     <th>username</th>
-                    <th>password</th>
+                    <th>password Hash MD5</th>
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>                
-                </tr>
-                <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                </tr>
-                
+                <?php if (!empty($user_datatables)) : ?>
+                    <?php foreach($user_datatables as $userx) : ?>
+                        <tr>
+                            <td> <?=$userx->id?></td>
+                            <td> <?=$userx->name?></td>
+                            <td> <?=$userx->username?></td>
+                            <td> <?=$userx->password?></td>                
+                        </tr>
+                    <?php endforeach; ?>
+
+                <?php else : ?>
+                    <h1 class="empty_entries">No existen usuarios,crea uno!</h1>
+                <?php endif; ?>
+
             </tbody>
-        </table>        
+        </table>   
+        <hr class="style13"/>  
+
 
     </div>
+    <div class="show_entries">
+    <h1>Comentarios</h1>
+       
+        <table id="comentarios" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>id_blog</th>
+                    <th>Autor</th>
+                    <th>comentario</th>                    
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>id_blog</th>
+                    <th>Autor</th>
+                    <th>comentario</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <?php if (!empty($comments_datatables)) : ?>
+                    <?php foreach($comments_datatables as $commentX) : ?>
+                        <tr>
+                            <td> <?=$commentX->id?></td>
+                            <td> <?=$commentX->id_blog?></td>
+                            <td> <?=$commentX->author?></td>
+                            <td> <?=$commentX->comment?></td>                
+                        </tr>
+                    <?php endforeach; ?>
+
+                <?php else : ?>
+                    <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
+                <?php endif; ?>
+
+            </tbody>
+        </table>   
+        <hr class="style13"/>  
+
+
+    </div>
+     <div class="show_entries">
+    <h1>Entradas</h1>
+       
+        <table id="entradas" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>permalink</th>
+                    <th>Autor</th>
+                    <th>título</th>   
+                    <th>contenido</th> 
+                    <th>fecha</th> 
+                    <th>tags</th>                  
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>permalink</th>
+                    <th>Autor</th>
+                    <th>título</th>   
+                    <th>contenido</th> 
+                    <th>fecha</th> 
+                    <th>tags</th> 
+                </tr>
+            </tfoot>
+            <tbody>
+                <?php if (!empty($entries_datatables)) : ?>
+                    <?php foreach($entries_datatables as $entriesX) : ?>
+                        <tr>
+                            <td> <?=$entriesX->id?></td>
+                            <td> <?=$entriesX->permalink?></td>
+                            <td> <?=$entriesX->author?></td>
+                            <td> <?=$entriesX->title?></td>    
+                            <td> <?=$entriesX->content?></td>
+                            <td> <?=$entriesX->date?></td>
+                            <td> <?=$entriesX->tags?></td>            
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
+                <?php endif; ?>
+
+            </tbody>
+        </table>   
+        <hr class="style13"/>  
+
+
+    </div>
+
 
 </body>
 </html>

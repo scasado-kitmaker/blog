@@ -16,7 +16,7 @@
                 <p><?=$entry->content?></p>
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?><br />
-                Tags: <?=tags($entry->tags)?><hr />
+                Tags: <?=tags($entry->tags)?><hr class="style13"/>
                 <?php if($this->session->userdata('is_logged_in')) : ?>
                         <div class="enviarComentario">
                                 Comentario:
@@ -34,7 +34,7 @@
                         echo '<h3>Comentarios</h3>';
                         foreach($comments as $comment)
                                 echo '<h4>Autor: '.$comment->author.'</h4>'.
-                        $comment->comment.'<br />'.($comment->date).'<hr />';
+                        $comment->comment.'<br />'.($comment->date).'<hr class="style13" />';
                 }
                 else
                         echo '<h3>No existen comentarios</h3>';

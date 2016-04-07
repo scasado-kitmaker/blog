@@ -9,9 +9,9 @@
 <div class="show_entries">
 	<?php include('menu.php');?>
 	<?=form_open(base_url().'index.php/users/register/')?>
-	<p>Name: <?=form_input('name')?></p>
-	<p>Username: <?=form_input('username')?></p>
-	<p>Password: <?=form_password('password')?></p>
+	<p>Name: <?=form_input('name','','placeholder="Introduce tu nombre."')?></p>
+	<p>Username: <?=form_input('username','','placeholder="Introduce tu nombre, con el te identificaras"')?></p>
+	<p>Password: <?=form_password('password','','placeholder="Introduce tu contraseña"')?></p>
 	<?=form_submit('submit', 'Register')?>
 	</div>
 </body>

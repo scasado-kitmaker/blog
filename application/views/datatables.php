@@ -58,12 +58,23 @@
                 $("#div3").fadeToggle();
                 $("#div4").fadeToggle();
                 $("#div17").fadeToggle();
-                $("#usuariosMas").fadeToggle();
-                $("#usuariosMenos").fadeToggle();
-                $("#comentariosMas").fadeToggle();
-                $("#comentariosMenos").fadeToggle();
-                $("#entradasMas").fadeToggle();
-                $("#entradasMenos").fadeToggle();
+                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#usuariosMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#usuariosMas').attr("src","http://localhost/blog/images/add.png");
+                }
+                 if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#comentariosMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#comentariosMas').attr("src","http://localhost/blog/images/add.png");
+                }
+                if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
+                }
+                $("#div3").fadeToggle();
+               
 
 
             });

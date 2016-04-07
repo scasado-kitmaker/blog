@@ -4,6 +4,10 @@ class Blog_model extends CI_Model {
 		$this->db->order_by('date DESC');
 		return $this->db->get('entries')->result();
 	}
+	public function getTags(){
+		$this->db->order_by('id DESC');
+		return $this->db->get('tags')->result();
+	}
 	public function insert($table, $data){
 		return $this->db->insert($table, $data);
 	}

@@ -35,156 +35,258 @@
 
     </script>
 
- <script type="text/javascript" class="init">
+    <script type="text/javascript" class="init">
 
         $(document).ready(function() {
             $('#comentarios').DataTable();
         } );
 
     </script>
-     <script type="text/javascript" class="init">
+    <script type="text/javascript" class="init">
 
         $(document).ready(function() {
             $('#entradas').DataTable();
         } );
 
     </script>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle();
+                $("#div3").fadeToggle();
+                $("#div4").fadeToggle();
+                $("#div17").fadeToggle();
+                $("#usuariosMas").fadeToggle();
+                $("#usuariosMenos").fadeToggle();
+                $("#comentariosMas").fadeToggle();
+                $("#comentariosMenos").fadeToggle();
+                $("#entradasMas").fadeToggle();
+                $("#entradasMenos").fadeToggle();
+
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#div11").click(function(){
+                $("#div1").fadeToggle();            
+                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#usuariosMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#usuariosMas').attr("src","http://localhost/blog/images/add.png");
+                }
+
+            });
+        });
+    </script>
+    
+
+
+    <script>
+        $(document).ready(function(){
+            $("#div13").click(function(){             
+                $("#div2").fadeToggle();
+                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#comentariosMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#comentariosMas').attr("src","http://localhost/blog/images/add.png");
+                }
+
+            });
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#div15").click(function(){
+               if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
+                }
+                $("#div3").fadeToggle();
+
+            });
+        });
+    </script>
+
+
+
 </head>
 <body>
 
-    <div class="show_entries">
+
+
+    <div class="show_entries" id="div0">
         <?php include('menu.php');?>
-        <br/>
-        <br/>
-        <h1>Usuarios</h1>
-        <table id="usuarios" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>username</th>
-                    <th>password Hash MD5</th>                    
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>username</th>
-                    <th>password Hash MD5</th>
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php if (!empty($user_datatables)) : ?>
-                    <?php foreach($user_datatables as $userx) : ?>
-                        <tr>
-                            <td> <?=$userx->id?></td>
-                            <td> <?=$userx->name?></td>
-                            <td> <?=$userx->username?></td>
-                            <td> <?=$userx->password?></td>                
-                        </tr>
-                    <?php endforeach; ?>
+        <div  id="div11" >
+            <h1>Usuarios
+                <img src="http://localhost/blog/images/add.png" id="usuariosMas">
+                
+            </h1>
+        </div>
 
-                <?php else : ?>
-                    <h1 class="empty_entries">No existen usuarios,crea uno!</h1>
-                <?php endif; ?>
+        <div  id="div1" style="display: none">
+            <!--<?php include('menu.php');?>-->
+            <br/>
+            <br/>
 
-            </tbody>
-        </table>   
-        <hr class="style13"/>  
+            <table id="usuarios" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>username</th>
+                        <th>password Hash MD5</th>                    
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>username</th>
+                        <th>password Hash MD5</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php if (!empty($user_datatables)) : ?>
+                        <?php foreach($user_datatables as $userx) : ?>
+                            <tr>
+                                <td> <?=$userx->id?></td>
+                                <td> <?=$userx->name?></td>
+                                <td> <?=$userx->username?></td>
+                                <td> <?=$userx->password?></td>                
+                            </tr>
+                        <?php endforeach; ?>
+
+                    <?php else : ?>
+                        <h1 class="empty_entries">No existen usuarios,crea uno!</h1>
+                    <?php endif; ?>
+
+                </tbody>
+            </table>   
+            <hr class="style13"/>  
+
+
+        </div>
+
+        <div  id="div13">
+            <h1>Comentarios
+                <img src="http://localhost/blog/images/add.png" id="comentariosMas">
+            </h1>
+        </div>
+
+        <div  id="div2" style="display: none">
+
+
+            <table id="comentarios" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>id_blog</th>
+                        <th>Autor</th>
+                        <th>comentario</th>                    
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>id</th>
+                        <th>id_blog</th>
+                        <th>Autor</th>
+                        <th>comentario</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php if (!empty($comments_datatables)) : ?>
+                        <?php foreach($comments_datatables as $commentX) : ?>
+                            <tr>
+                                <td> <?=$commentX->id?></td>
+                                <td> <?=$commentX->id_blog?></td>
+                                <td> <?=$commentX->author?></td>
+                                <td> <?=$commentX->comment?></td>                
+                            </tr>
+                        <?php endforeach; ?>
+
+                    <?php else : ?>
+                        <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
+                    <?php endif; ?>
+
+                </tbody>
+            </table>   
+            <hr class="style13"/>  
+
+
+        </div>
+        <div  id="div15">
+            <h1>Entradas
+                <img src="http://localhost/blog/images/add.png" id="entradasMas">
+            </h1>
+        </div>
+        
+        <div  id="div3" style="display: none">
+
+
+            <table id="entradas" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>permalink</th>
+                        <th>Autor</th>
+                        <th>título</th>   
+                        <th>contenido</th> 
+                        <th>fecha</th> 
+                        <th>tags</th>                  
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>id</th>
+                        <th>permalink</th>
+                        <th>Autor</th>
+                        <th>título</th>   
+                        <th>contenido</th> 
+                        <th>fecha</th> 
+                        <th>tags</th> 
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php if (!empty($entries_datatables)) : ?>
+                        <?php foreach($entries_datatables as $entriesX) : ?>
+                            <tr>
+                                <td> <?=$entriesX->id?></td>
+                                <td> <?=$entriesX->permalink?></td>
+                                <td> <?=$entriesX->author?></td>
+                                <td> <?=$entriesX->title?></td>    
+                                <td> <?=$entriesX->content?></td>
+                                <td> <?=$entriesX->date?></td>
+                                <td> <?=$entriesX->tags?></td>            
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
+                    <?php endif; ?>
+
+                </tbody>
+            </table>   
+            <hr class="style13"/>  
+
+
+        </div>
 
 
     </div>
-    <div class="show_entries">
-    <h1>Comentarios</h1>
-       
-        <table id="comentarios" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>id_blog</th>
-                    <th>Autor</th>
-                    <th>comentario</th>                    
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>id</th>
-                    <th>id_blog</th>
-                    <th>Autor</th>
-                    <th>comentario</th>
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php if (!empty($comments_datatables)) : ?>
-                    <?php foreach($comments_datatables as $commentX) : ?>
-                        <tr>
-                            <td> <?=$commentX->id?></td>
-                            <td> <?=$commentX->id_blog?></td>
-                            <td> <?=$commentX->author?></td>
-                            <td> <?=$commentX->comment?></td>                
-                        </tr>
-                    <?php endforeach; ?>
-
-                <?php else : ?>
-                    <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
-                <?php endif; ?>
-
-            </tbody>
-        </table>   
-        <hr class="style13"/>  
-
-
+    <div id="div4" class="show_entries">
+        <button class="button1Datatables">Mostrar</button>
     </div>
-     <div class="show_entries">
-    <h1>Entradas</h1>
-       
-        <table id="entradas" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>permalink</th>
-                    <th>Autor</th>
-                    <th>título</th>   
-                    <th>contenido</th> 
-                    <th>fecha</th> 
-                    <th>tags</th>                  
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>id</th>
-                    <th>permalink</th>
-                    <th>Autor</th>
-                    <th>título</th>   
-                    <th>contenido</th> 
-                    <th>fecha</th> 
-                    <th>tags</th> 
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php if (!empty($entries_datatables)) : ?>
-                    <?php foreach($entries_datatables as $entriesX) : ?>
-                        <tr>
-                            <td> <?=$entriesX->id?></td>
-                            <td> <?=$entriesX->permalink?></td>
-                            <td> <?=$entriesX->author?></td>
-                            <td> <?=$entriesX->title?></td>    
-                            <td> <?=$entriesX->content?></td>
-                            <td> <?=$entriesX->date?></td>
-                            <td> <?=$entriesX->tags?></td>            
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
-                <?php endif; ?>
-
-            </tbody>
-        </table>   
-        <hr class="style13"/>  
+    <div id="div17" class="show_entries" style="display: none">
+        <button class="button1Datatables">Ocultar</button>
+    </div>  
 
 
-    </div>
 
 
 </body>

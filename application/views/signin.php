@@ -13,7 +13,7 @@
 	<?php echo (isset($error)) ? '<p>Incorrect Data!</p>' : '';?>
 	<p>Usuario: <?=form_input('username')?></p>   
 	<p>Contraseña: <?=form_password('password')?></p>
-	<?=form_submit('submit', 'Log In')?>
+	<?=form_submit('submit', 'Iniciar sesión')?>
 	</div>
 </body>
 </html>

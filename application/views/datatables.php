@@ -73,7 +73,7 @@
                 } else {
                     $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
                 }
-                $("#div3").fadeToggle();
+                
                
 
 

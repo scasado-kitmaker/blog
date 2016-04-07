@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>View Entries</title>    
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/> 
+    <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
    <div class="show_entries">
@@ -25,13 +26,21 @@
             }
 
             ?>                    
-            <h2 class="tituloShowEntries"><?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title)?></h2>
+             <h2 class="tituloShowEntries">
+                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'class="titularEntrada"')?>
+                
+                </h2>
+             <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
+                           
+               
+
             <p><?=$entry->content?></p>
             Autor: <?=$entry->author?><br />
             Fecha: <?=$entry->date?>
             <h3>
                 <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, '<img  src="http://localhost/blog/images/edit.png">')?>
                 <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,'<img  src="http://localhost/blog/images/delete.png">')?>
+                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/images/comment.png">')?>
             </h3>
             <hr class="style13"/>
         <?php endforeach; ?>

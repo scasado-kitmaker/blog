@@ -33,11 +33,11 @@
                 <?php 
                 if (isset($my_entries) && in_array($entry->id, $my_entries)) {
 
-                    $edit   = 'Editar'; 
-                    $delete = 'Borrar';
+                    $edit   = '<img  src="http://localhost/blog/images/edit.png">'; 
+                    $delete = '<img  src="http://localhost/blog/images/delete.png">';
                 } elseif ($this->session->userdata('name')=='admin') {
-                    $edit   = 'Editar'; 
-                    $delete = 'Borrar';
+                    $edit   = '<img  src="http://localhost/blog/images/edit.png">'; 
+                    $delete = '<img  src="http://localhost/blog/images/delete.png">';
                 }
                 else {
                     $edit   = ' ';
@@ -45,15 +45,24 @@
                 }
 
                 ?>                    
-                <h2 class="tituloShowEntries"><?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title)?></h2>
-                <p><?=$entry->content?></p>
+                <h2 class="tituloShowEntries">
+                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'class="titularEntrada"')?>
+                
+                </h2>
+                <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
+                <p>
+
+                <?=$entry->content?></p>
 
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?>
                 <h3>
-                    <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, '<img  src="http://localhost/blog/images/edit.png">')?>
-                    <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,'<img  src="http://localhost/blog/images/delete.png">')?>
+                    <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit )?>
+                    <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,$delete)?>
+                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/images/comment.png">')?>
+                   
                 </h3>
+
                 <hr class="style13"/>
             <?php endforeach; ?>
         <?php else : ?>

@@ -28,9 +28,11 @@ public function insert_entry(){
         'permalink'  => permalink($this->input->post('title')),
         'author' => $this->session->userdata('username'),
         'title' => $this->input->post('title'),
+        'image'=> $this->input->post('image'),
         'content' => $this->input->post('content'),
         'date' => date('Y-m-d H:i:s'),
         'tags' => $this->input->post('tags')
+        
         ); 
 
    /*$tag=array(
@@ -78,6 +80,7 @@ public function update_entry()
     $entry = array(
         'title'     => $this->input->post('title'),
         'content'   => $this->input->post('content'),
+        'image'=> $this->input->post('image'),
         'tags'      => $this->input->post('tags'),
         );
 

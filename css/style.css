@@ -125,7 +125,11 @@ body {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-
+.titularEntrada{
+  text-decoration: none;
+  color: black;
+  font-family: fuentePrincipal;
+}
 .btnNuevaEntrada {
   /* Da un formato a los botones que estan presentes en el menu superiro */
 
@@ -147,6 +151,9 @@ body {
   font-size: 20px;
   text-decoration: none;  
   
+}
+.imagenEntradas{
+  text-align: center;
 }
 
 .btnNuevaEntrada:hover {

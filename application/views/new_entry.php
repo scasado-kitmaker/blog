@@ -89,6 +89,9 @@
 		
 		<?=form_open(base_url().'index.php/blog/insert_entry/')?>
 		<p>Título: <?=form_input('title','','placeholder="¡Escribe el título de tu entrada!"')?></p>
+    <p>Imagen entrada:</p>
+    <p><?=form_textarea('image','','class="editTextArea" placeholder="¡Introduce la url de la imagen!"')?></p>
+    <div class="ui-widget">
 		<p>Contenido:</p>
 		<p><?=form_textarea('content','','class="editTextArea" placeholder="¡Escribe el contenido de tu entrada!"')?></p>
 		<div class="ui-widget">

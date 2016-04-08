@@ -33,11 +33,11 @@
                         
                         echo '<h3>Comentarios</h3>';
                         foreach($comments as $comment)
-                                echo '<h4>Autor: '.$comment->author.'</h4>'.
-                        $comment->comment.'<br />'.($comment->date).'<hr class="style13" />';
+                                echo $comment->comment.'<br />'.'<h4>Autor: '.$comment->author.'<br />'.
+                        ($comment->date).'</h4>'.'<hr class="style13" />';
                 }
                 else
-                        echo '<h3>No existen comentarios</h3>';
+                        echo '<h3>No existen comentarios.</h3>';
                 ?>
         </div>
 

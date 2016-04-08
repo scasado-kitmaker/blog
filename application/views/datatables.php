@@ -49,6 +49,13 @@
         } );
 
     </script>
+    <script type="text/javascript" class="init">
+
+        $(document).ready(function() {
+            $('#wurfl').DataTable();
+        } );
+
+    </script>
 
     <script>
         $(document).ready(function(){
@@ -57,13 +64,15 @@
                 $("#div2").fadeToggle();
                 $("#div3").fadeToggle();
                 $("#div4").fadeToggle();
+                $("#div5").fadeToggle();
+                $("#div22").fadeToggle();
                 $("#div17").fadeToggle();
                 if ( $('#usuariosMas').attr("src") == "http://localhost/blog/images/add.png") {
                     $('#usuariosMas').attr("src","http://localhost/blog/images/remove.png");
                 } else {
                     $('#usuariosMas').attr("src","http://localhost/blog/images/add.png");
                 }
-                 if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
+                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
                     $('#comentariosMas').attr("src","http://localhost/blog/images/remove.png");
                 } else {
                     $('#comentariosMas').attr("src","http://localhost/blog/images/add.png");
@@ -73,8 +82,13 @@
                 } else {
                     $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
                 }
+                if ( $('#wurflMas').attr("src") == "http://localhost/blog/images/add.png") {
+                    $('#wurflMas').attr("src","http://localhost/blog/images/remove.png");
+                } else {
+                    $('#wurflMas').attr("src","http://localhost/blog/images/add.png");
+                }
                 
-               
+
 
 
             });
@@ -114,14 +128,26 @@
     <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-               if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
-                } else {
-                    $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
-                }
-                $("#div3").fadeToggle();
+             if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
+                $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
+            } else {
+                $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
+            }
+            $("#div3").fadeToggle();
 
-            });
+        });
+        });
+    </script>
+        <script>
+        $(document).ready(function(){
+            $("#div16").click(function(){
+             if ( $('#wurflMas').attr("src") == "http://localhost/blog/images/add.png") {
+                $('#wurflMas').attr("src","http://localhost/blog/images/remove.png");
+            } else {
+                $('#wurflMas').attr("src","http://localhost/blog/images/add.png");
+            }
+             $("#div22").fadeToggle();
+        });
         });
     </script>
 
@@ -142,7 +168,7 @@
         </div>
 
         <div  id="div1" style="display: none">
-            <!--<?php include('menu.php');?>-->
+            
             <br/>
             <br/>
 
@@ -287,6 +313,89 @@
 
 
         </div>
+        <div  id="div16">
+            <h1>Wurf Cloud
+                <img src="http://localhost/blog/images/add.png" id="wurflMas">
+            </h1>
+        </div>
+        
+        <div  id="div22" style="display: none">
+
+            <table id="wurfl" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>id</th>  
+                        <th>complete_device_name</th>
+                        <th>form_factor</th>
+                        <th>is_mobile</th>                         
+                        <th>date</th> 
+                        <th>user</th>                   
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>id</th>  
+                        <th>complete_device_name</th>
+                        <th>form_factor</th>
+                        <th>is_mobile</th>                         
+                        <th>date</th> 
+                        <th>user</th> 
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php if (!empty($wurfl_datatables)) : ?>
+                        <?php foreach($wurfl_datatables as $wurflX) : ?>
+                            <tr>
+                                <td> <?=$wurflX->id?></td>
+                                <td> <?=$wurflX->complete_device_name?></td>
+                                <td> <?=$wurflX->form_factor?></td>
+                                <td> <?=$wurflX->is_mobile?></td>
+                                <td> <?=$wurflX->date?></td>
+                                <td> <?=$wurflX->user?></td>                                             
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <h1 class="empty_entries">No existen datos,identificate con un dispositivo!</h1>
+                    <?php endif; ?>
+
+                </tbody>
+            </table>   
+            <hr class="style13"/>  
+
+
+        </div>
+
+        <div class="show_entries" >
+
+            <?php 
+
+        // Include the autoloader - edit this path! 
+            require_once 'wurfl/src/autoload.php'; 
+        // Create a configuration object  
+            $config = new ScientiaMobile\WurflCloud\Config();  
+        // Set your WURFL Cloud API Key  
+            $config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
+        // Create the WURFL Cloud Client  
+            $client = new ScientiaMobile\WurflCloud\Client($config);  
+        // Detect your device  
+            $client->detectDevice();  
+        // Use the capabilities  
+           
+
+        //Save device data
+
+            $complete_device_name = $client->getDeviceCapability('complete_device_name');
+            
+
+            $form_factor = $client->getDeviceCapability('form_factor');
+           
+
+            $is_mobile = $client->getDeviceCapability('is_mobile');
+           
+
+            ?>
+            
+        </div>
 
 
     </div>
@@ -296,6 +405,14 @@
     <div id="div17" class="show_entries" style="display: none">
         <button class="button1Datatables">Ocultar</button>
     </div>  
+    
+
+
+
+
+
+}
+
 
 
 

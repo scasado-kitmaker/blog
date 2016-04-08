@@ -21,8 +21,6 @@
     </script>
     -->
 
-
-
 </head>
 <body>
 
@@ -46,7 +44,7 @@
 
                 ?>                    
                 <h2 class="tituloShowEntries">
-                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'class="titularEntrada"')?>
+                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'style="text-decoration: none; color:black;"')?>
                 
                 </h2>
                 <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>

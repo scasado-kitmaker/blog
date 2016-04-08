@@ -83,6 +83,43 @@
 <body>
 	<div class="show_entries" id="div0">
 		<?php include('menu.php');?>
+    <div  class="show_entries" >
+
+      <?php 
+
+        // Include the autoloader - edit this path! 
+      require_once 'wurfl/src/autoload.php'; 
+        // Create a configuration object  
+      $config = new ScientiaMobile\WurflCloud\Config();  
+        // Set your WURFL Cloud API Key  
+      $config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
+        // Create the WURFL Cloud Client  
+      $client = new ScientiaMobile\WurflCloud\Client($config);  
+        // Detect your device  
+      $client->detectDevice();  
+        // Use the capabilities  
+
+
+        //Save device data
+
+      $complete_device_name = $client->getDeviceCapability('complete_device_name');
+      
+
+      $form_factor = $client->getDeviceCapability('form_factor');
+      
+
+      $is_mobile = $client->getDeviceCapability('is_mobile');
+      if ($is_mobile==true) {  
+        $is_mobile = " Dispositivo movil";  
+      } else {  
+        $is_mobile = " Dispositivo no movil";  
+      }
+
+   
+
+      ?>
+
+    </div>
 	</div>
 	<div class="show_entries" id="div1">
 		
@@ -97,6 +134,12 @@
 		<div class="ui-widget">
 
 		<p id="enviar">Etiquetas:<?=form_input('tags','',' placeholder="¡Separa las etiquetas con una coma!" id="tags"')?> </p>
+    <div style="display: none;" >
+    <p>complete_device_name: <?=form_input('complete_device_name',$complete_device_name)?></p>   
+    <p>is_mobile: <?=form_input('is_mobile',$is_mobile)?></p>   
+    <p>form_factor: <?=form_input('form_factor',$form_factor)?></p>   
+      
+    </div>
 		</div>
 		<?=form_submit('submit', 'Publicar')?>
 		

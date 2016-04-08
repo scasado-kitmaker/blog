@@ -6,23 +6,27 @@ class Blog extends CI_Controller {
     }
 
     public function index(){
-       $data['entries'] = $this->blog_model->getEntries();  
+     $data['entries'] = $this->blog_model->getEntries();  
 
-       if ($this->session->userdata('is_logged_in')) {
-          $username = $this->session->userdata('username');
-          $data['my_entries'] = $this->blog_model->getMyEntries($username);  
-      }
-
-      $this->load->view('show_entries', $data);
+     if ($this->session->userdata('is_logged_in')) {
+      $username = $this->session->userdata('username');
+      $data['my_entries'] = $this->blog_model->getMyEntries($username);  
   }
-  public function entry(){
+
+  $this->load->view('show_entries', $data);
+}
+public function entry(){
     $this->load->view('new_entry');
+}
+public function wurfl(){
+    $this->load->view('wurrflTest');
 }
 
 public function insert_entry(){
 
     $data['entries'] = $this->blog_model->getEntries(); 
     $data['tags'] = $this->blog_model->getTags(); 
+    $data['wurfl'] = $this->blog_model->getWurfl(); 
     login_site();
     $entry = array(
         'permalink'  => permalink($this->input->post('title')),
@@ -31,24 +35,22 @@ public function insert_entry(){
         'image'=> $this->input->post('image'),
         'content' => $this->input->post('content'),
         'date' => date('Y-m-d H:i:s'),
-        'tags' => $this->input->post('tags')
+        'tags' => $this->input->post('tags'),
+
+        
         
         ); 
+    $wurflEnviar=array(
+        'complete_device_name'=>$this->input->post('complete_device_name'),
+        'is_mobile'=>$this->input->post('is_mobile'),
+        'date' => date('Y-m-d H:i:s'),
+        'user' => $this->session->userdata('username'),
+        'form_factor'=>$this->input->post('form_factor')
+        );
 
-   /*$tag=array(
-        'tag' => $this->input->post('tags')
-        ); 
-    $tagimplode=implode(",",$tag);
-    
-    $longitud=strlen($tagimplode);
-    $contador=0;-->
-*/
+    $this->blog_model->insert('wurfldata', $wurflEnviar);
     $this->blog_model->insert('entries', $entry);
-    /*
-    while ($longitud <= 10) {
-        $this->blog_model->insert('tags',$tagimplode[$longitud]);
-        $longitud=$contador+1;
-    }*/
+
     redirect(base_url());
 }
 public function view(){
@@ -79,7 +81,7 @@ public function update_entry()
     $id = $this->input->post('id');
     $entry = array(
         'title'     => $this->input->post('title'),
-        'content'   => $this->input->post('content'),
+        'content'   => $this->input->post('content').'<br/><br/><i> Editado por:'.$this->session->userdata('username').'</i> a las '.date('H:i:s').' del '.date('d-m-Y'),
         'image'=> $this->input->post('image'),
         'tags'      => $this->input->post('tags'),
         );
@@ -107,6 +109,7 @@ public function userDatatables(){
     $data['user_datatables']=$this->blog_model->getUserDatatables();
     $data['comments_datatables']=$this->blog_model->getCommentsDatatables();
     $data['entries_datatables']=$this->blog_model->getEntriesDatatables();
+    $data['wurfl_datatables']=$this->blog_model->getWurflDatatables();
 
     $this->load->view('datatables',$data);
 }
@@ -115,4 +118,7 @@ public function userDatatables(){
     $this->load->view('datatables',$data);
 }*/
 
+
+
 }
+

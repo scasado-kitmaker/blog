@@ -74,4 +74,13 @@ class Blog_model extends CI_Model {
 	public function getEntriesDatatables(){
 		return $this->db->get('entries')->result();
 	}
+	public function getWurflDatatables(){
+		return$this->db->get('wurfldata')->result();
+	}
+
+	public function getWurfl(){
+		
+		return $this->db->get('wurfldata')->result();
+	}
+	
 }

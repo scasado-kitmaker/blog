@@ -23,7 +23,7 @@
                                 <?=form_open(base_url().'index.php/blog/comment/')?>
                                 <?=form_hidden('id_blog', $this->uri->segment(3))?>
                                 <?=form_textarea('comment','','class="editTextArea" placeholder="¡Escribe tu comentario!"')?>
-                                <?=form_submit('submit','Enviar')?>
+                                <?=form_submit('submit','Enviar capitan')?>
                                 <?=form_close()?>
                         </div>
 

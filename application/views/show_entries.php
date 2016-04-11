@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>View Entries</title> 
+    <title>Mostrar entradas</title> 
     <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
     <script src="http://localhost/blog/js/jquery-2.2.3.js"></script>
@@ -25,6 +25,7 @@
 <body>
 
     <div class="show_entries">
+    <!--Inserta la vista que contiene el menu principal-->
         <?php include('menu.php');?>        
         <?php if (!empty($entries)) : ?>
             <?php foreach($entries as $entry) : ?>

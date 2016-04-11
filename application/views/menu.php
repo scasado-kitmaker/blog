@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">       
-	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
+	<!--Estilos-->
 	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
 	<link href="http://localhost/blog/css/toastr.css" rel="stylesheet"/>
-	<script src="http://localhost/blog/js/toastr.js"></script>
-	
-
-
-
+	<!--Scripts-->
+	<script src="http://localhost/blog/js/toastr.js"></script>	
+	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
 </head>
 
 <body>
 
 	<div id="header">		
-		<?=anchor(base_url().'index.php/', '<img  src="http://localhost/blog/images/header2.png">')?>
+		<?=anchor((base_url().' '), '<img  src="http://localhost/blog/images/header2.png">')?>
 	</div>
-
+	<!--Menu principal y codigo para resaltar el boton de la página donde estamos-->
 	<div class="menuBotones">
 		<ul>
 			<li>
@@ -30,7 +28,7 @@
 				$varVerde5=' ';
 				$varVerde6=' ';
 				$varVerde7=' ';
-			
+
 				if ($actual_link =='http://localhost/blog/index.php') {
 					$varVerde1='principal';
 				}else{
@@ -62,36 +60,35 @@
 
 				}
 				if ($actual_link ==base_url().'index.php/users/signin/') {
-					$varVerde6='principal';
+					$varVerde6=' ';
 				}else{
 					$varVerde6=' ';
 
 				}
 				if ($actual_link ==base_url().'index.php/users/signup/') {
-					$varVerde7='principal';
+					$varVerde7=' ';
 				}else{
 					$varVerde7=' ';
 
-				}
-				
+				}	
 
 				if ($this->session->userdata('is_logged_in'))
-		//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
+				//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
 
 					echo  anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout ');
 
 
 
 				elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'principal'))
-		//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
-					echo anchor(base_url().'index.php/users/signup/',' Sign Up ','class="'.$varVerde6.'"');
+					//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
+					echo anchor(base_url().'index.php/users/signup/',' Registrate ','class="'.$varVerde6.'"');
 
 
 
 
 				else
 		//echo anchor(base_url().'index.php/users/signin/','Sign In').' | ';
-					echo anchor(base_url().'index.php/users/signin/',' Entrar ' ,'class="'.$varVerde7.'"');
+					echo anchor(base_url().'index.php/users/signin/',' Identificate ' ,'class="'.$varVerde7.'"');
 				?>
 
 			</li>
@@ -106,80 +103,29 @@
 				?>
 			</li>
 			<li>
-			<?php
-			echo anchor(base_url().' ',' Todas las entradas ','class="'.$varVerde3.'"');
-			if ($this->session->userdata('is_logged_in'))
-				echo ' ';
-			
-
-
-			?>
+				<?php
+				echo anchor(base_url().' ',' Todas las entradas ','class="'.$varVerde3.'"');
+				if ($this->session->userdata('is_logged_in'))
+					echo ' ';	
+				?>
 			</li>
 			<li>
-			<?php
-			if ($this->session->userdata('is_logged_in'))
-				
-				echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="'.$varVerde4.'"');
-			?>
+				<?php
+				if ($this->session->userdata('is_logged_in'))					
+					echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="'.$varVerde4.'"');
+				?>
 			</li>
 
 			<li>
 				<?php
 				if ($this->session->userdata('name')=='admin') {
 					echo anchor(base_url().'index.php/blog/userDatatables/',' Tablas de datos ','class="'.$varVerde5.'"');
-
 				}
 				?>
-
 			</li>
 
-			
 		</ul>
-
-
-
-
-		<!--<?php
-
-		if ($this->session->userdata('is_logged_in'))
-		//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
-
-			echo  anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout ' ,'class="btnLogin" style="margin-top:50px"');
-
-
-
-		elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'validate'))
-		//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
-			echo anchor(base_url().'index.php/users/signup/',' Sign Up ','class="btnLogin" ');
-
-
-
-		else
-		//echo anchor(base_url().'index.php/users/signin/','Sign In').' | ';
-			echo anchor(base_url().'index.php/users/signin/',' Entrar ','class="btnLogin"'  );
-		if ($this->session->userdata('is_logged_in'))
-		//echo anchor(base_url().'index.php/blog/entry/', 'New Entry');
-			echo anchor(base_url().'index.php/blog/entry/',' Nueva entrada ','class="btnNuevaEntrada"');
-
-		if ($this->session->userdata('is_logged_in'))
-			echo ' ';
-	//echo anchor(base_url(), 'All Entries');
-		echo anchor(base_url().' ',' Todas las entradas ','class="btnMostrar"');
-		if ($this->session->userdata('is_logged_in'))
-			echo ' ';
-		if ($this->session->userdata('is_logged_in'))
-		//echo anchor(base_url().'index.php/blog/MyEntries/', 'My Entries');
-			echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="btnMisEntradas"');
-
-		if ($this->session->userdata('name')=='admin') {
-			echo anchor(base_url().'index.php/blog/userDatatables/',' datatables ','class="btnLogin"');
-		}
-
-
-		?>
-		-->
-	</div>
-	<hr class="style13"/>
-
-
+		
+</div>
+<hr class="style13"/>
 </body>

@@ -7,11 +7,10 @@
 </head>
 <body class="viewContenido">
         <div class="show_entries">
+                <!--Inserta la vista que contiene el menu principal-->
                 <?php include('menu.php')
                 ;?>
-
-
-
+                <!--Muestra datos de la entrada y muestra un formulario para enviar comentarios-->
                 <h2><?=$entry->title?></h2>
                 <p><?=$entry->content?></p>
                 Autor: <?=$entry->author?><br />
@@ -28,9 +27,9 @@
                         </div>
 
                 <?php endif; ?>
+                <!--Muestra los comentarios guardados en la base de datosm en caso de no existir muestra un mensaje-->
                 <?php
-                if(!empty($comments)){
-                        
+                if(!empty($comments)){                        
                         echo '<h3>Comentarios</h3>';
                         foreach($comments as $comment)
                                 echo $comment->comment.'<br />'.'<h4>Autor: '.$comment->author.'<br />'.

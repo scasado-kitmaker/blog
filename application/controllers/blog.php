@@ -5,23 +5,26 @@ class Blog extends CI_Controller {
         $this->load->model('blog_model');               
     }
 
-    public function index(){
-     $data['entries'] = $this->blog_model->getEntries();  
+public function index(){
+    $data['entries'] = $this->blog_model->getEntries();  
 
-     if ($this->session->userdata('is_logged_in')) {
-      $username = $this->session->userdata('username');
-      $data['my_entries'] = $this->blog_model->getMyEntries($username);  
-  }
-
-  $this->load->view('show_entries', $data);
+    if ($this->session->userdata('is_logged_in')) {
+        $username = $this->session->userdata('username');
+        $data['my_entries'] = $this->blog_model->getMyEntries($username);  
+    }
+    $this->load->view('show_entries', $data);
 }
+//Carga la vista new_entry
 public function entry(){
     $this->load->view('new_entry');
 }
+//Carga la vista wurrflTest
 public function wurfl(){
     $this->load->view('wurrflTest');
 }
 
+//Guarda los datos obtenidos en variables y luegolas inserta en la 
+//tablas entries y wurfldata y redirecciona a la url base
 public function insert_entry(){
 
     $data['entries'] = $this->blog_model->getEntries(); 
@@ -35,9 +38,7 @@ public function insert_entry(){
         'image'=> $this->input->post('image'),
         'content' => $this->input->post('content'),
         'date' => date('Y-m-d H:i:s'),
-        'tags' => $this->input->post('tags'),
-
-        
+        'tags' => $this->input->post('tags'),        
         
         ); 
     $wurflEnviar=array(
@@ -53,12 +54,14 @@ public function insert_entry(){
 
     redirect(base_url());
 }
+//Obtiene las datos de las tablas y carga la vista view_entry 
 public function view(){
     $entry_id = $this->uri->segment(3);
     $data['entry'] = $this->blog_model->getEntry($entry_id);
     $data['comments'] = $this->blog_model->getComments($entry_id);
     $this->load->view('view_entry', $data);
 }
+//Guarda los datos y luego los inserta en la tabla comments de la base de datos.
 public function comment(){
     $id_blog = $this->input->post('id_blog');
     $comment = array(
@@ -70,12 +73,14 @@ public function comment(){
     $this->blog_model->insert('comments', $comment);
     redirect(base_url().'index.php/blog/view/'.$id_blog);
 }
+//Obtiene los datos de la tabla y luego carga la vista edit_entry
 public function edit() {
   $id_entry = $this->uri->segment(3);
   $data['entry_data'] = $this->blog_model->getEntryData($id_entry);  
 
   $this->load->view('edit_entry', $data);
 }
+//Actualiza los datos de la tabla entries y redirecciona a la vista con los nuevos datos cargados.
 public function update_entry()
 {
     $id = $this->input->post('id');
@@ -91,6 +96,7 @@ public function update_entry()
     redirect(base_url() . 'index.php/blog/view/' . $id);
 }
 
+//Elimina la entrada que se le indique y redirecciona a la url base
 public function delete(){
     $id_entry = $this->uri->segment(3);
 
@@ -99,12 +105,14 @@ public function delete(){
     redirect(base_url());
 }
 
+//Carga la vista con las entradas del usuario
 public function MyEntries(){
     $checkAuthor=$this->session->userdata('name');   
     $data['entries'] = $this->blog_model->getUserEntry($checkAuthor);   
     $this->load->view('show_user_entries', $data);
 
 }
+//Carga la vista que contiene las datatables y le pasa los datos que usaran
 public function userDatatables(){
     $data['user_datatables']=$this->blog_model->getUserDatatables();
     $data['comments_datatables']=$this->blog_model->getCommentsDatatables();
@@ -121,4 +129,3 @@ public function userDatatables(){
 
 
 }
-

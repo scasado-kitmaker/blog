@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Sign Up</title> 
+	<title>Registrate</title> 
+	<!--Estilos-->
 	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
 </head>
 <body>
+<!--Formulario usado para enviar los datos para crear un usuario-->
 <div class="show_entries">
 	<?php include('menu.php');?>
 	<?=form_open(base_url().'index.php/users/register/')?>

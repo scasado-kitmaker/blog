@@ -2,25 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Sign In</title> 
+	<title>Identificate</title> 
 	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
 	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
-	<script src="http://localhost/blog/js/jquery-2.2.3.js"></script>
-	
-	
-	
+	<script src="http://localhost/blog/js/jquery-2.2.3.js"></script>	
 </head>
 <body>
-
-
 	<div class="show_entries">
-
-
+		<!--Inserta la vista que contiene el menu principal-->
 		<?php include('menu.php');?>
-		<div   >
-
+		<!--Obtiene datos del dispositivo mediante wurfl cloud-->
+		<div>
 			<?php 
-
         // Include the autoloader - edit this path! 
 			require_once 'wurfl/src/autoload.php'; 
         // Create a configuration object  
@@ -31,13 +24,9 @@
 			$client = new ScientiaMobile\WurflCloud\Client($config);  
         // Detect your device  
 			$client->detectDevice();  
-        // Use the capabilities  
-
-
-        //Save device data
-
-			$complete_device_name = $client->getDeviceCapability('complete_device_name');
 			
+        //Save device data
+			$complete_device_name = $client->getDeviceCapability('complete_device_name');			
 
 			$form_factor = $client->getDeviceCapability('form_factor');
 			
@@ -47,17 +36,13 @@
 			} else {  
 				$is_mobile = " Dispositivo no movil";  
 			}
-
 			
 			?>
 
 		</div>
-		
-
-
 
 		<?=form_open(base_url().'index.php/users/validate/')?>
-
+		<!--Muestra un toast en caso de que los datos sea incorrectos-->
 		<?php echo (isset($error)) ? '<script type="text/javascript">Command: toastr["error"]("Los datos introducidos son incorrectos", "Aviso")
 
 		toastr.options = {
@@ -81,10 +66,9 @@
 		<p>Usuario: <?=form_input('username','','placeholder="Usuario"')?></p>   
 		<p>Contraseña: <?=form_password('password','','placeholder="Contraseña"')?></p>
 		<div style="display: none;" >
-		<p>complete_device_name: <?=form_input('complete_device_name',$complete_device_name)?></p>   
-		<p>is_mobile: <?=form_input('is_mobile',$is_mobile)?></p>   
-		<p>form_factor: <?=form_input('form_factor',$form_factor)?></p>   
-			
+			<p>complete_device_name: <?=form_input('complete_device_name',$complete_device_name)?></p>   
+			<p>is_mobile: <?=form_input('is_mobile',$is_mobile)?></p>   
+			<p>form_factor: <?=form_input('form_factor',$form_factor)?></p>   
 		</div>
 		<?=form_submit('submit', 'Iniciar sesión')?>
 	</div>
@@ -102,7 +86,7 @@
 
 		</div>-->
 
-		<div  class="show_entries" >
+		<div class="show_entries" >
 
 			<?php 
 
@@ -142,4 +126,3 @@
 
 	</body>
 	</html>
-

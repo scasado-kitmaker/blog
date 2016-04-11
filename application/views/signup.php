@@ -14,7 +14,7 @@
 	<p>Name: <?=form_input('name','','placeholder="Introduce tu nombre."')?></p>
 	<p>Username: <?=form_input('username','','placeholder="Introduce tu nombre, con el te identificaras"')?></p>
 	<p>Password: <?=form_password('password','','placeholder="Introduce tu contraseña"')?></p>
-	<?=form_submit('submit', 'Register')?>
+	<?=form_submit('submit', 'Registrarse')?>
 	</div>
 </body>
 </html>

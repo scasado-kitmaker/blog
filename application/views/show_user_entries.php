@@ -42,7 +42,7 @@
                 <hr class="style13"/>
             <?php endforeach; ?>
         <?php else : ?>
-            <h1>No entries</h1>
+            <h1>No tienes entradas</h1>
         </div>
     <?php endif; ?>
 </body>

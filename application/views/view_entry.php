@@ -12,6 +12,7 @@
                 ;?>
                 <!--Muestra datos de la entrada y muestra un formulario para enviar comentarios-->
                 <h2><?=$entry->title?></h2>
+                 <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
                 <p><?=$entry->content?></p>
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?><br />

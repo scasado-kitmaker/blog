@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 11-04-2016 a las 08:41:12
+-- Tiempo de generación: 11-04-2016 a las 11:29:37
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment` text NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Volcado de datos para la tabla `comments`
@@ -63,7 +63,9 @@ INSERT INTO `comments` (`id`, `id_blog`, `author`, `comment`, `date`) VALUES
 (21, 41, 'admin', 'wolololo', '2016-04-08 08:31:55'),
 (22, 56, 'admin', 'Test', '2016-04-08 13:06:49'),
 (23, 56, 'admin', 'test2', '2016-04-08 13:07:26'),
-(24, 56, 'admin', 'test3', '2016-04-08 13:07:42');
+(24, 56, 'admin', 'test3', '2016-04-08 13:07:42'),
+(25, 57, 'admin', 'Internet explorer rules!', '2016-04-11 11:05:28'),
+(26, 61, 'Juan23', 'Lorem ipsum!!!!!', '2016-04-11 11:20:14');
 
 -- --------------------------------------------------------
 
@@ -81,17 +83,29 @@ CREATE TABLE IF NOT EXISTS `entries` (
   `tags` text NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=63 ;
 
 --
 -- Volcado de datos para la tabla `entries`
 --
 
 INSERT INTO `entries` (`id`, `permalink`, `author`, `title`, `content`, `date`, `tags`, `image`) VALUES
-(13, 'sed-euismod', 'sergio', 'Sed euismod editado', 'Sed euismod molestie nibh ut dignissim. Duis pharetra, tellus ac bibendum venenatis, dui nunc consectetur lacus, in cursus quam ex commodo elit. In vestibulum venenatis blandit. Aenean blandit leo ac consequat pellentesque. Ut facilisis blandit ullamcorper. Nullam vestibulum purus pulvinar congue sodales. Mauris dapibus eros quis tincidunt pellentesque. Nullam sollicitudin vulputate felis eleifend tincidunt. Maecenas auctor condimentum augue, at rutrum nisl mollis blandit. Phasellus ornare magna ut mauris ultricies hendrerit. Integer vel dignissim lectus, at tempor diam. Duis volutpat vitae eros et pretium.\r\n<br/><br/><i> Editado por:admin</i>', '2016-04-06 06:56:42', 'Sed,,vag', 'http://www.matrallune.com/images/imagen_corporativa.jpg'),
-(56, 'pellentesque-quis-euismod-justo.', 'admin', 'Pellentesque quis euismod justo.', 'Pellentesque quis euismod justo. Nullam mattis felis nec faucibus imperdiet. Sed euismod dolor vel mi scelerisque tempus. Cras pellentesque neque in hendrerit varius. Etiam vitae purus mollis, sodales lectus sed, ullamcorper enim. Vestibulum egestas sem arcu. Nunc fringilla lectus sit amet commodo sodales. Nam in sollicitudin est, id mattis leo. Curabitur auctor magna tincidunt leo laoreet convallis nec et lorem. Nam condimentum, erat non sagittis scelerisque, ante sapien egestas ex, eu mollis orci risus in quam. Integer imperdiet turpis eget mi gravida congue sit amet quis nunc. Etiam eu arcu sollicitudin, porta tortor sit amet, tristique felis. Nullam luctus at purus ac hendrerit', '2016-04-08 13:06:25', 'sed', 'http://duartte.co/wmr/wp-content/uploads/2015/06/dummy-image-800x533.jpg'),
+(13, 'sed-euismod', 'sergio', 'Sed euismod ', 'Sed euismod molestie nibh ut dignissim. Duis pharetra, tellus ac bibendum venenatis, dui nunc consectetur lacus, in cursus quam ex commodo elit. In vestibulum venenatis blandit. Aenean blandit leo ac consequat pellentesque. Ut facilisis blandit ullamcorper. Nullam vestibulum purus pulvinar congue sodales. Mauris dapibus eros quis tincidunt pellentesque. Nullam sollicitudin vulputate felis eleifend tincidunt. Maecenas auctor condimentum augue, at rutrum nisl mollis blandit. Phasellus ornare magna ut mauris ultricies hendrerit. Integer vel dignissim lectus, at tempor diam. Duis volutpat vitae eros et pretium.\r\n<br/><br/><i> Editado por:admin</i> a las 11:06:12 del 11-04-2016', '2016-04-06 06:56:42', 'Sed,vag', 'http://www.matrallune.com/images/imagen_corporativa.jpg'),
+(56, 'pellentesque-quis-euismod-justo.', 'admin', 'Pellentesque quis euismod justo.', 'Pellentesque quis euismod justo. Nullam mattis felis nec faucibus imperdiet. Sed euismod dolor vel mi scelerisque tempus. Cras pellentesque neque in hendrerit varius. Etiam vitae purus mollis, sodales lectus sed, ullamcorper enim. Vestibulum egestas sem arcu. Nunc fringilla lectus sit amet commodo sodales. Nam in sollicitudin est, id mattis leo. Curabitur auctor magna tincidunt leo laoreet convallis nec et lorem. Nam condimentum, erat non sagittis scelerisque, ante sapien egestas ex, eu mollis orci risus in quam. Integer imperdiet turpis eget mi gravida congue sit amet quis nunc. Etiam eu arcu sollicitudin, porta tortor sit amet, tristique felis. Nullam luctus at purus ac hendrerit.<br/><br/><i> Editado por:admin</i> a las 11:07:12 del 11-04-2016', '2016-04-08 13:06:25', 'sed,', 'https://4.bp.blogspot.com/-DoaEqgEulvE/VrR6wjJ0t2I/AAAAAAAAAO4/llPlnzAhE3I/s1600/forum.png'),
 (57, 'in-fringilla-', 'admin', 'In fringilla ', 'In fringilla nisi sit amet tortor lacinia, id varius massa pretium. Morbi leo turpis, rutrum id eleifend sit amet, blandit ac lorem. Etiam eu nibh vulputate, interdum ante vestibulum, euismod ligula. Suspendisse eros mauris, imperdiet ut odio at, pharetra pharetra enim. Curabitur a turpis purus. Integer sed finibus nisi, sit amet tempus dui. In sem nulla, tristique scelerisque sollicitudin et, interdum et magna. Ut pellentesque lorem in odio bibendum, mollis cursus velit placerat. Etiam tristique vitae nulla in mattis. Aliquam cursus tincidunt gravida.', '2016-04-08 13:14:43', 'Java, PHP, ', 'http://1.bp.blogspot.com/-3_LkONivqiU/T4ScOW0tUUI/AAAAAAAAADk/DmLtVHa6lCY/s1600/ICNICO~1.GIF'),
-(58, 'test', 'admin', 'Test', 'asdasdasda', '2016-04-11 08:10:34', 'Suspendisse, Finibus, ', 'http://image.slidesharecdn.com/a-3-6e503d5cf97b4ec76c8f27250bcb9355b96ceb19-150126024050-conversion-gate02/95/adsada-1-638.jpg?cb=1422252906');
+(61, 'lorem-ipsum', 'admin', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices congue urna, eget aliquet odio vestibulum quis. Nullam ultricies, erat sit amet hendrerit porta, augue turpis finibus purus, quis iaculis massa eros vitae dui. Cras accumsan ullamcorper nisi vel elementum. Phasellus vestibulum, sapien et tempor porta, sem nisl lobortis ligula, vitae iaculis dolor turpis non metus. Nulla facilisi. Vivamus metus velit, elementum non quam id, ultrices venenatis leo. Quisque tincidunt posuere dapibus. Pellentesque quis convallis lacus. Nullam condimentum nisi quis nisi egestas, pulvinar aliquet est iaculis. Cras et vehicula eros. Aenean sit amet quam ut augue facilisis tempus.\r\n', '2016-04-11 11:13:03', 'Lorem, Ipsum, ', 'http://stephboreldesign.com/wp-content/uploads/2012/03/lorem-ipsum-logo.jpg'),
+(62, 'opera', 'Juan23', 'Opera', 'Etiam pretium, orci nec venenatis pulvinar, nisl neque fermentum tellus, vel eleifend justo lectus imperdiet nibh. Pellentesque id convallis libero. Donec scelerisque, purus non volutpat blandit, mi sapien fermentum enim, at rhoncus neque metus non nulla. Nam bibendum velit tortor. Aliquam cursus elementum velit quis ornare. Vestibulum fermentum consectetur ornare. Phasellus in arcu dictum, iaculis neque non, lacinia augue. Sed ullamcorper lectus risus, sit amet lacinia odio ultricies eu. Fusce tincidunt interdum dui, eget consectetur odio volutpat in. Fusce accumsan, arcu vitae tempus tristique, purus erat feugiat nisi, ac aliquam magna nisl sed erat. Phasellus a sapien porttitor, hendrerit ligula vitae, pellentesque eros. Pellentesque scelerisque, felis vel viverra accumsan, mauris lectus auctor quam, vulputate pulvinar ante leo sed mauris. Nullam commodo id lacus id viverra. Maecenas vehicula massa non enim egestas, id accumsan nibh placerat. Duis iaculis elit diam, quis scelerisque justo auctor vel.\r\n', '2016-04-11 11:20:01', 'Ipsum, Duis, Maecenas, ', 'http://findicons.com/files/icons/1008/quiet/128/opera.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tags`
+--
+
+CREATE TABLE IF NOT EXISTS `tags` (
+  `id` int(11) NOT NULL,
+  `tag` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -105,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -116,15 +130,8 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`) VALUES
 (2, 'sergio', 'sergio', 'd8578edf8458ce06fbc5bb76a58c5ca4'),
 (3, 'enrique', 'enrique', 'd8578edf8458ce06fbc5bb76a58c5ca4'),
 (4, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(5, 'test1', 'test1', '5a105e8b9d40e1329780d62ea2265d8a'),
-(6, 'test2', 'test2', 'ad0234829205b9033196ba818f7a872b'),
-(7, 'test3', 'test3', '8ad8757baa8564dc136c1e07507f4a98'),
-(8, 'test4', 'test4', '86985e105f79b95d6bc918fb45ec7727'),
-(9, 'test5', 'test5', 'e3d704f3542b44a621ebed70dc0efe13'),
-(10, 'test6', 'test6', '4cfad7076129962ee70c36839a1e3e15'),
-(11, 'test7', 'test7', 'b04083e53e242626595e2b8ea327e525'),
-(12, 'alberto', 'user2', 'd8578edf8458ce06fbc5bb76a58c5ca4'),
-(13, 'wasd', 'wasd', 'c96dd568316deb9d8c7dec73b4c27cbb');
+(14, 'Juan', 'Juan23', 'd8578edf8458ce06fbc5bb76a58c5ca4'),
+(15, 'usuario test', 'test', '098f6bcd4621d373cade4e832627b4f6');
 
 -- --------------------------------------------------------
 
@@ -142,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `wurfldata` (
   PRIMARY KEY (`id`),
   KEY `id` (`id`),
   KEY `id_2` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `wurfldata`
@@ -155,7 +162,10 @@ INSERT INTO `wurfldata` (`complete_device_name`, `form_factor`, `is_mobile`, `id
 ('generic web browser', 'Desktop', ' Dispositivo no movil', 17, '2016-04-08 13:06:25', 'admin'),
 ('generic web browser', 'Desktop', ' Dispositivo no movil', 18, '2016-04-08 13:14:43', 'admin'),
 ('generic web browser', 'Desktop', ' Dispositivo no movil', 19, '2016-04-11 08:10:34', 'admin'),
-('generic web browser', 'Desktop', ' Dispositivo no movil', 20, '2016-04-11 08:14:45', 'admin');
+('generic web browser', 'Desktop', ' Dispositivo no movil', 20, '2016-04-11 08:14:45', 'admin'),
+('generic web browser', 'Desktop', ' Dispositivo no movil', 21, '2016-04-11 11:11:43', 'admin'),
+('generic web browser', 'Desktop', ' Dispositivo no movil', 22, '2016-04-11 11:13:03', 'admin'),
+('generic web browser', 'Desktop', ' Dispositivo no movil', 23, '2016-04-11 11:20:01', 'Juan23');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

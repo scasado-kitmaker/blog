@@ -1,10 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Blog extends CI_Controller {
+    //Constructor del controlador
     public function __construct(){
         parent::__construct();
         $this->load->model('blog_model');               
     }
-
+//Carga las entradas y las envia a la vista show_entries para mostrarlas
 public function index(){
     $data['entries'] = $this->blog_model->getEntries();  
 

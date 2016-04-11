@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Blog_model extends CI_Model {
-	//obtiene las entradas de la bbdd y las devuelve
+	//obtiene las entradas de la bbdd y las devuelve en orden descente
 	public function getEntries(){
 		$this->db->order_by('date DESC');
 		return $this->db->get('entries')->result();

@@ -159,7 +159,8 @@ body {
   text-align: left;
   text-decoration: none;
   font-family: fuentePrincipal;
-  font-size: 40px;
+  font-size: 40px; 
+  
 }
 
 input[type=password] {

@@ -82,7 +82,7 @@
   </script>-->
 
 </head>
-<body onload="autocomplete(),alertaCobra()">
+<body onload="autocomplete()">
 	<div class="show_entries" id="div0">
   <!--Inserta la vista que contiene el menu principal-->
 		<?php include('menu.php');?>

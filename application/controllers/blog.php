@@ -3,6 +3,8 @@ class Blog extends CI_Controller {
     //Constructor del controlador
     public function __construct(){
         parent::__construct();
+        date_default_timezone_set('Europe/Madrid');
+
         $this->load->model('blog_model');               
     }
 //Carga las entradas y las envia a la vista show_entries para mostrarlas

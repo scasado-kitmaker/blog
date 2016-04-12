@@ -322,7 +322,8 @@ en la base de datos
                         <th>form_factor</th>
                         <th>is_mobile</th>                         
                         <th>date</th> 
-                        <th>user</th>                   
+                        <th>user</th>
+                        <th>IPV6</th>                   
                     </tr>
                 </thead>
                 <tfoot>
@@ -333,6 +334,7 @@ en la base de datos
                         <th>is_mobile</th>                         
                         <th>date</th> 
                         <th>user</th> 
+                        <th>IPV6</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -345,7 +347,8 @@ en la base de datos
                                 <td> <?=$wurflX->form_factor?></td>
                                 <td> <?=$wurflX->is_mobile?></td>
                                 <td> <?=$wurflX->date?></td>
-                                <td> <?=$wurflX->user?></td>                                             
+                                <td> <?=$wurflX->user?></td>
+                                <td> <?=$wurflX->ip_address?></td>                                              
                             </tr>
                         <?php endforeach; ?>
                     <!--En caso de no contener datos nos muestra el mensaje-->  

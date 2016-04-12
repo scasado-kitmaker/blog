@@ -18,6 +18,12 @@ This repo contains in-development code for future releases. To download the
 latest stable release please visit the `CodeIgniter Downloads
 <https://codeigniter.com/download>`_ page.
 
+***************
+Lorem Ipsum
+***************
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
 **************************
 Changelog and New Features
 **************************
@@ -70,11 +76,7 @@ The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
 
 
-***************
-Lorem Ipsum
-***************
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 
 

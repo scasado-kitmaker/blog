@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>Mis entradas</title>    
     <!--Favicon-->
-    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/> 
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/> 
     <!--Estilos-->
-    <link href='http://localhost/blog/assets/css/style.css' rel='stylesheet' type='text/css' />
+    <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
     <div class="show_entries">
-    <!--Inserta la vista que contiene el menu principal-->
+        <!--Inserta la vista que contiene el menu principal-->
         <?php include('menu.php');?>  
         <?php if (!empty($entries)) : ?>
             <?php foreach($entries as $entry) : ?>
@@ -35,9 +35,9 @@
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?>
                 <h3>
-                    <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, '<img  src="http://localhost/blog/assets/images/edit.png">')?>
-                    <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,'<img  src="http://localhost/blog/assets/images/delete.png">')?>
-                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/assets/images/comment.png">')?>
+                    <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, '<img  src="http://localhost/blog/public/assets/images/edit.png">')?>
+                    <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,'<img  src="http://localhost/blog/public/assets/images/delete.png">')?>
+                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/public/assets/images/comment.png">')?>
                 </h3>
                 <hr class="style13"/>
             <?php endforeach; ?>

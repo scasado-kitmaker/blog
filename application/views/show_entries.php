@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Mostrar entradas</title> 
-    <link href='http://localhost/blog/assets/css/style.css' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/>
-    <script src="http://localhost/blog/js/jquery-2.2.3.js"></script>
+    <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
+    <script src="http://localhost/blog/public/assets/js/jquery-2.2.3.js"></script>
 
 
     <!--jQuery de google en caso de que el local no funcione
@@ -32,11 +32,11 @@
                 <?php 
                 if (isset($my_entries) && in_array($entry->id, $my_entries)) {
 
-                    $edit   = '<img  src="http://localhost/blog/assets/images/edit.png">'; 
-                    $delete = '<img  src="http://localhost/blog/assets/images/delete.png">';
+                    $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
+                    $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
                 } elseif ($this->session->userdata('name')=='admin') {
-                    $edit   = '<img  src="http://localhost/blog/assets/images/edit.png">'; 
-                    $delete = '<img  src="http://localhost/blog/assets/images/delete.png">';
+                    $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
+                    $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
                 }
                 else {
                     $edit   = ' ';
@@ -58,7 +58,7 @@
                 <h3>
                     <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit )?>
                     <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,$delete)?>
-                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/assets/images/comment.png">')?>
+                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/public/assets/images/comment.png">')?>
                    
                 </h3>
 

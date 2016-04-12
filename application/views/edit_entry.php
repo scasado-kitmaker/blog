@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<title>Editar entrada</title>	
 	<!--Favicon-->
-	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/>
+	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
 	<!--Estilos-->
-	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+	<link href='http://localhost/blog/public/css/style.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
 	<div class="show_entries">

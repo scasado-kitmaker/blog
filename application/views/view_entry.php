@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8">
         <title><?=$entry->title?></title> 
-        <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/>     
+        <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>     
 </head>
 <body class="viewContenido">
         <div class="show_entries">

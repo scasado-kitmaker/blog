@@ -4,12 +4,12 @@
 	<meta charset="utf-8">
 	<title>Nueva entrada</title>  
   <!--Estilos-->
-	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/>   
-	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>   
+	<link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <!--Scripts-->
-  <script src="http://localhost/blog/assets/js/jquery-2.2.3.js"></script>
-  <script src="http://localhost/blog/assets/js/test.js"></script>
+  <script src="http://localhost/blog/public/assets/js/jquery-2.2.3.js"></script>
+  <script src="http://localhost/blog/public/assets/js/test.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <!--Script para el autocomplete del campo de etiquetas -->

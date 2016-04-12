@@ -51,7 +51,10 @@
                 <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
                 <p>
 
-                <?=$entry->content?></p>
+                <p>
+                    <?=$entry->content?>
+                    <?=$entry->editInfo?>
+                </p>
 
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?>

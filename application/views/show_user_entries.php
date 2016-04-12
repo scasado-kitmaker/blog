@@ -31,7 +31,10 @@
                     <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'style="text-decoration: none; color:black;"')?>
                 </h2>
                 <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
-                <p><?=$entry->content?></p>
+                <p>
+                    <?=$entry->content?>
+                    <?=$entry->editInfo?>
+                </p>
                 Autor: <?=$entry->author?><br />
                 Fecha: <?=$entry->date?>
                 <h3>

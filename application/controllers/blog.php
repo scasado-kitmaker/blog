@@ -89,9 +89,10 @@ public function update_entry()
     $id = $this->input->post('id');
     $entry = array(
         'title'     => $this->input->post('title'),
-        'content'   => $this->input->post('content').'<br/><br/><i> Editado por:'.$this->session->userdata('username').'</i> a las '.date('H:i:s').' del '.date('d-m-Y'),
+        'content'   => $this->input->post('content'),
         'image'=> $this->input->post('image'),
         'tags'      => $this->input->post('tags'),
+        'editInfo'=>'<br/><br/><i> Editado por: '.$this->session->userdata('username').' a las '.date('H:i:s').' del '.date('d-m-Y').'</i>',
         );
 
     $this->blog_model->updateEntry($id, $entry);

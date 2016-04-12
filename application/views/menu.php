@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">       
 	<!--Estilos-->
-	<link href='http://localhost/blog/assets/css/style.css' rel='stylesheet' type='text/css' />
-	<link href="http://localhost/blog/assets/css/toastr.css" rel="stylesheet"/>
+	<link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
+	<link href="http://localhost/blog/public/assets/css/toastr.css" rel="stylesheet"/>
 	<!--Scripts-->
-	<script src="http://localhost/blog/assets//js/toastr.js"></script>	
+	<script src="http://localhost/blog/public/assets//js/toastr.js"></script>	
 	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
 </head>
 
 <body>
 
 	<div id="header">		
-		<?=anchor((base_url().' '), '<img  src="http://localhost/blog/assets/images/header2.png">')?>
+		<?=anchor((base_url().' '), '<img  src="http://localhost/blog/public/assets/images/header2.png">')?>
 	</div>
 	<!--Menu principal y codigo para resaltar el boton de la página donde estamos-->
 	<div class="menuBotones"> 

@@ -10,9 +10,9 @@ en la base de datos
     <title>View Entries</title> 
      <!-- estilos-->
     <style type="text/css" class="init"></style>
-    <link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
-    <link href='http://localhost/blog/css/styleTables.css' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
+    <link href='http://localhost/blog/assets/css/style.css' rel='stylesheet' type='text/css' />
+    <link href='http://localhost/blog/assets/css/styleTables.css' rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/assets/images/favicon.ico"/>
     <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">-->
   
@@ -74,25 +74,25 @@ en la base de datos
                 $("#div5").fadeToggle();
                 $("#div22").fadeToggle();
                 $("#div17").fadeToggle();
-                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#usuariosMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#usuariosMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#usuariosMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#usuariosMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
-                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#comentariosMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#comentariosMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#comentariosMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#comentariosMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
-                if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#entradasMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#entradasMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#entradasMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
-                if ( $('#wurflMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#wurflMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#wurflMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#wurflMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#wurflMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#wurflMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
             });
         });
@@ -103,10 +103,10 @@ en la base de datos
         $(document).ready(function(){
             $("#div11").click(function(){
                 $("#div1").fadeToggle();            
-                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#usuariosMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#usuariosMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#usuariosMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#usuariosMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#usuariosMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
             });
         });
@@ -117,10 +117,10 @@ en la base de datos
         $(document).ready(function(){
             $("#div13").click(function(){             
                 $("#div2").fadeToggle();
-                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/images/add.png") {
-                    $('#comentariosMas').attr("src","http://localhost/blog/images/remove.png");
+                if ( $('#comentariosMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                    $('#comentariosMas').attr("src","http://localhost/blog/assets/images/remove.png");
                 } else {
-                    $('#comentariosMas').attr("src","http://localhost/blog/images/add.png");
+                    $('#comentariosMas').attr("src","http://localhost/blog/assets/images/add.png");
                 }
 
             });
@@ -131,10 +131,10 @@ en la base de datos
     <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-               if ( $('#entradasMas').attr("src") == "http://localhost/blog/images/add.png") {
-                $('#entradasMas').attr("src","http://localhost/blog/images/remove.png");
+               if ( $('#entradasMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                $('#entradasMas').attr("src","http://localhost/blog/assets/images/remove.png");
             } else {
-                $('#entradasMas').attr("src","http://localhost/blog/images/add.png");
+                $('#entradasMas').attr("src","http://localhost/blog/assets/images/add.png");
             }
             $("#div3").fadeToggle();
 
@@ -146,10 +146,10 @@ en la base de datos
     <script>
         $(document).ready(function(){
             $("#div16").click(function(){
-               if ( $('#wurflMas').attr("src") == "http://localhost/blog/images/add.png") {
-                $('#wurflMas').attr("src","http://localhost/blog/images/remove.png");
+               if ( $('#wurflMas').attr("src") == "http://localhost/blog/assets/images/add.png") {
+                $('#wurflMas').attr("src","http://localhost/blog/assets/images/remove.png");
             } else {
-                $('#wurflMas').attr("src","http://localhost/blog/images/add.png");
+                $('#wurflMas').attr("src","http://localhost/blog/assets/images/add.png");
             }
             $("#div22").fadeToggle();
         });
@@ -162,7 +162,7 @@ en la base de datos
         <?php include('menu.php');?>
         <div  id="div11" >
             <h1>Usuarios
-                <img src="http://localhost/blog/images/add.png" id="usuariosMas">
+                <img src="http://localhost/blog/assets/images/add.png" id="usuariosMas">
                 
             </h1>
         </div>
@@ -210,7 +210,7 @@ en la base de datos
 
         <div  id="div13">
             <h1>Comentarios
-                <img src="http://localhost/blog/images/add.png" id="comentariosMas">
+                <img src="http://localhost/blog/assets/images/add.png" id="comentariosMas">
             </h1>
         </div>
         <!--Crea la estructura de la tabla comentarios-->
@@ -254,7 +254,7 @@ en la base de datos
 
         <div  id="div15">
             <h1>Entradas
-                <img src="http://localhost/blog/images/add.png" id="entradasMas">
+                <img src="http://localhost/blog/assets/images/add.png" id="entradasMas">
             </h1>
         </div>
         <!--Crea la estructura de la tabla entradas-->
@@ -308,7 +308,7 @@ en la base de datos
 
         <div  id="div16">
             <h1>Wurf Cloud
-                <img src="http://localhost/blog/images/add.png" id="wurflMas">
+                <img src="http://localhost/blog/assets/images/add.png" id="wurflMas">
             </h1>
         </div>
         

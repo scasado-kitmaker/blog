@@ -17,7 +17,9 @@ public function index(){
 }
 //Carga la vista new_entry
 public function entry(){
+
     $this->load->view('new_entry');
+
 }
 //Carga la vista wurrflTest
 public function wurfl(){

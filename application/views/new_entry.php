@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <!--Scripts-->
   <script src="http://localhost/blog/assets/js/jquery-2.2.3.js"></script>
+  <script src="http://localhost/blog/assets/js/test.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <!--Script para el autocomplete del campo de etiquetas -->
-  <script>
+  <!--<script>
     $(function() {	
 
       var availableTags = [
@@ -78,10 +79,10 @@
         }
       });
     });
-  </script>
+  </script>-->
 
 </head>
-<body>
+<body onload="autocomplete()">
 	<div class="show_entries" id="div0">
   <!--Inserta la vista que contiene el menu principal-->
 		<?php include('menu.php');?>

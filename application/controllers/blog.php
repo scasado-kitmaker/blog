@@ -51,7 +51,8 @@ public function insert_entry(){
         'is_mobile'=>$this->input->post('is_mobile'),
         'date' => date('Y-m-d H:i:s'),
         'user' => $this->session->userdata('username'),
-        'form_factor'=>$this->input->post('form_factor')
+        'form_factor'=>$this->input->post('form_factor'),
+        'ip_address'=>$_SERVER['REMOTE_ADDR']
         );
 
     $this->blog_model->insert('wurfldata', $wurflEnviar);

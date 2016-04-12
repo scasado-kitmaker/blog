@@ -180,7 +180,6 @@ input[type=submit] {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   font-family: fuentePrincipal;
   font-size: 20px;
@@ -227,7 +226,6 @@ input[type=content], select {
  background-color: #333;
  color: white;
  border: none;
- border-radius: 4px;
  cursor: pointer;
  font-family: fuentePrincipal;
  font-size: 20px;

@@ -16,7 +16,7 @@
 		<?=anchor((base_url().' '), '<img  src="http://localhost/blog/images/header2.png">')?>
 	</div>
 	<!--Menu principal y codigo para resaltar el boton de la página donde estamos-->
-	<div class="menuBotones">
+	<div class="menuBotones"> 
 		<ul>
 			<li>
 				<?php

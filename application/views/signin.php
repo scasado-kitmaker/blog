@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Identificate</title> 
 	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/images/favicon.ico"/>
-	<link href='http://localhost/blog/css/style.css' rel='stylesheet' type='text/css' />
+	<link href='http://localhost/blog/assets/css/style.css' rel='stylesheet' type='text/css' />
 	<script src="http://localhost/blog/js/jquery-2.2.3.js"></script>	
 </head>
 <body>

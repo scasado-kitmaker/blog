@@ -52,7 +52,8 @@ public function insert_entry(){
         'date' => date('Y-m-d H:i:s'),
         'user' => $this->session->userdata('username'),
         'form_factor'=>$this->input->post('form_factor'),
-        'ip_address'=>$_SERVER['REMOTE_ADDR']
+        'ip_address'=>$_SERVER['REMOTE_ADDR'],
+        'remote_host'=>$_SERVER['REMOTE_HOST']
         );
 
     $this->blog_model->insert('wurfldata', $wurflEnviar);

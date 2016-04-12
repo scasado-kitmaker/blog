@@ -323,7 +323,8 @@ en la base de datos
                         <th>is_mobile</th>                         
                         <th>date</th> 
                         <th>user</th>
-                        <th>IPV6</th>                   
+                        <th>IPV6</th> 
+                        <th>remote host</th>                  
                     </tr>
                 </thead>
                 <tfoot>
@@ -335,6 +336,7 @@ en la base de datos
                         <th>date</th> 
                         <th>user</th> 
                         <th>IPV6</th>
+                        <th>remote host</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -348,7 +350,8 @@ en la base de datos
                                 <td> <?=$wurflX->is_mobile?></td>
                                 <td> <?=$wurflX->date?></td>
                                 <td> <?=$wurflX->user?></td>
-                                <td> <?=$wurflX->ip_address?></td>                                              
+                                <td> <?=$wurflX->ip_address?></td>    
+                                <td> <?=$wurflX->remote_host?></td>                                            
                             </tr>
                         <?php endforeach; ?>
                     <!--En caso de no contener datos nos muestra el mensaje-->  

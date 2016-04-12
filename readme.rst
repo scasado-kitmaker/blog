@@ -33,6 +33,16 @@ Installation
 
 Añadir la carpeta blog al directorio www de wamp
 
+añadir a httpd.conf(Apache) para el poder obtener el nombre del host remoto:
+# HostnameLookups: Log the names of clients or just their IP addresses
+# e.g., www.apache.org (on) or 204.62.129.132 (off).
+# The default is off because it'd be overall better for the net if people
+# had to knowingly turn this feature on, since enabling it means that
+# each client request will result in AT LEAST one lookup request to the
+# nameserver.
+#
+HostnameLookups On
+
 *********
 Resources
 *********

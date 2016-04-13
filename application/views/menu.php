@@ -5,9 +5,22 @@
 	<!--Estilos-->
 	<link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
 	<link href="http://localhost/blog/public/assets/css/toastr.css" rel="stylesheet"/>
+	<link href="http://localhost/blog/public/assets/css/jquery.cookiebar.css" rel="stylesheet"/>
+
+
+	
 	<!--Scripts-->
-	<script src="http://localhost/blog/public/assets//js/toastr.js"></script>	
+	<script src="http://localhost/blog/public/assets/js/toastr.js"></script>	
 	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
+
+	<script type="text/javascript" src="/your-js-folder/jquery.js"></script> 
+	<script type="text/javascript" src="http://localhost/blog/public/assets/js/jquery.cookiebar.js"></script> 
+	<script type="text/javascript"> 
+		$(document).ready(function(){
+			$.cookieBar();
+		});
+	</script>
+
 </head>
 
 <body>
@@ -126,6 +139,6 @@
 
 		</ul>
 		
-</div>
-<hr class="style13"/>
+	</div>
+	<hr class="style13"/>
 </body>

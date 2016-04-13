@@ -188,6 +188,23 @@ input[type=submit]:hover:not(.active) {
   background-color: #111;
 }
 
+input[type=reset] {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-family: fuentePrincipal;
+  font-size: 20px;
+}
+
+
+input[type=reset]:hover:not(.active) {
+  background-color: #111;
+}
+
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;

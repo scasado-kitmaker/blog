@@ -19,57 +19,68 @@
             });
         });
     </script>
-    -->
+-->
 
 </head>
 <body>
 
     <div class="show_entries">
-    <!--Inserta la vista que contiene el menu principal-->
+        <!--Inserta la vista que contiene el menu principal-->
         <?php include('menu.php');?>        
         <?php if (!empty($entries)) : ?>
-            <?php foreach($entries as $entry) : ?>
-                <?php 
-                if (isset($my_entries) && in_array($entry->id, $my_entries)) {
 
-                    $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
-                    $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
-                } elseif ($this->session->userdata('name')=='admin') {
-                    $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
-                    $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
-                }
-                else {
-                    $edit   = ' ';
-                    $delete = ' ';
-                }
 
-                ?>                    
-                <h2 class="tituloShowEntries">
-                <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'style="text-decoration: none; color:black;"')?>
-                
-                </h2>
-                <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
-                <p>
+            <!--Prueba reproductor html5
+            <video width="400" controls>
+                <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML5 video.
+            </video>
+            -->
 
-                <p>
-                    <?=$entry->content?>
-                    <?=$entry->editInfo?>
-                </p>
 
-                Autor: <?=$entry->author?><br />
-                Fecha: <?=$entry->date?>
-                <h3>
-                    <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit )?>
-                    <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,$delete)?>
-                    <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/public/assets/images/comment.png">')?>
-                   
-                </h3>
+                  <?php foreach($entries as $entry) : ?>
+                    <?php 
+                    if (isset($my_entries) && in_array($entry->id, $my_entries)) {
 
-                <hr class="style13"/>
-            <?php endforeach; ?>
-        <?php else : ?>
-        </div>
-        <h1>No existe ninguna entrada</h1>
-    <?php endif; ?>
-</body>
-</html>
+                        $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
+                        $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
+                    } elseif ($this->session->userdata('name')=='admin') {
+                        $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
+                        $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
+                    }
+                    else {
+                        $edit   = ' ';
+                        $delete = ' ';
+                    }
+
+                    ?>                    
+                    <h2 class="tituloShowEntries">
+                        <?=anchor(base_url().'index.php/blog/view/'.$entry->id,$entry->title,'style="text-decoration: none; color:black;"')?>
+
+                    </h2>
+                    <div class="imagenEntradas"><?php echo'<img src="'.$entry->image.'" />' ?> </div>
+                    <p>
+
+                        <p>
+                            <?=$entry->content?>
+                            <?=$entry->editInfo?>
+                        </p>
+
+                        Autor: <?=$entry->author?><br />
+                        Fecha: <?=$entry->date?>
+                        <h3>
+                            <?=anchor(base_url().'index.php/blog/edit/'.$entry->id, $edit )?>
+                            <?=anchor(base_url().'index.php/blog/delete/'.$entry->id,$delete)?>
+                            <?=anchor(base_url().'index.php/blog/view/'.$entry->id,'<img  src="http://localhost/blog/public/assets/images/comment.png">')?>
+
+                        </h3>
+
+                        <hr class="style13"/>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                </div>
+                <h1>No existe ninguna entrada</h1>
+            <?php endif; ?>
+        </body>
+        </html>

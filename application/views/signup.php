@@ -25,7 +25,9 @@
 		
 		<?=form_submit('submit', 'Registrarse')?>
 		
+		<!--Prueba recaptcha
 		<div class="g-recaptcha" data-sitekey="6LdKSh0TAAAAAK_VyEn0aL8P1Tvfz24MDpB7IQ2R"></div>
+		-->
 
 
 

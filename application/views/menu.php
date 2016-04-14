@@ -6,13 +6,9 @@
 	<link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
 	<link href="http://localhost/blog/public/assets/css/toastr.css" rel="stylesheet"/>
 	<link href="http://localhost/blog/public/assets/css/jquery.cookiebar.css" rel="stylesheet"/>
-
-
-	
 	<!--Scripts-->
 	<script src="http://localhost/blog/public/assets/js/toastr.js"></script>	
 	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
-
 	<script type="text/javascript" src="/your-js-folder/jquery.js"></script> 
 	<script type="text/javascript" src="http://localhost/blog/public/assets/js/jquery.cookiebar.js"></script> 
 	<script type="text/javascript"> 
@@ -20,14 +16,12 @@
 			$.cookieBar();
 		});
 	</script>
-
 </head>
-
 <body>
-
 	<div id="header">		
 		<?=anchor((base_url().' '), '<img  src="http://localhost/blog/public/assets/images/header2.png">')?>
 	</div>
+
 	<!--Menu principal y codigo para resaltar el boton de la página donde estamos-->
 	<div class="menuBotones"> 
 		<ul>
@@ -86,31 +80,24 @@
 				}	
 
 				if ($this->session->userdata('is_logged_in'))
-				//echo 'Hello, '.$this->session->userdata('name').' ('. anchor(base_url()."index.php/users/logout/", "logout").') | ';
-
+				
 					echo  anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout ');
 
 
 
 				elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'principal'))
-					//echo anchor(base_url().'index.php/users/signup/','Sign Up').' | ';
+					
 					echo anchor(base_url().'index.php/users/signup/',' Registrate ','class="'.$varVerde6.'"');
-
-
-
-
 				else
-		//echo anchor(base_url().'index.php/users/signin/','Sign In').' | ';
+		
 					echo anchor(base_url().'index.php/users/signin/',' Identificate ' ,'class="'.$varVerde7.'"');
 				?>
-
 			</li>
 
 			<li>
 				<?php
 				if ($this->session->userdata('is_logged_in'))
 					echo anchor(base_url().'index.php/blog/entry/',' Nueva entrada ','class="'.$varVerde2.'"');
-
 				if ($this->session->userdata('is_logged_in'))
 					echo ' ';
 				?>
@@ -128,7 +115,6 @@
 					echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="'.$varVerde4.'"');
 				?>
 			</li>
-
 			<li>
 				<?php
 				if ($this->session->userdata('name')=='admin') {

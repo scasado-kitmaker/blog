@@ -2,7 +2,6 @@
 La vista datatables.php nos muestra distintias tablas las cuales contienen informacón presente
 en la base de datos 
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -358,7 +357,6 @@ en la base de datos
                     <?php else : ?>
                         <h1 class="empty_entries">No existen datos,identificate con un dispositivo!</h1>
                     <?php endif; ?>
-
                 </tbody>
             </table>   
             <hr class="style13"/>  
@@ -382,9 +380,7 @@ en la base de datos
 
             $complete_device_name = $client->getDeviceCapability('complete_device_name');
             
-
             $form_factor = $client->getDeviceCapability('form_factor');
-
 
             $is_mobile = $client->getDeviceCapability('is_mobile');
             ?>

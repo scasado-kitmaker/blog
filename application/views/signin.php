@@ -35,10 +35,8 @@
 				$is_mobile = " Dispositivo movil";  
 			} else {  
 				$is_mobile = " Dispositivo no movil";  
-			}
-			
+			}			
 			?>
-
 		</div>
 
 		<?=form_open(base_url().'index.php/users/validate/')?>
@@ -72,57 +70,34 @@
 		</div>
 		<?=form_submit('submit', 'Iniciar sesión')?>
 	</div>
-	<!--<div class="show_entries" id="div1">
-		
-		
-		<?=form_open(base_url().'index.php/blog/insert_entry/')?>
-		<p>complete_device_name <?=form_input('title','')?></p>
-		<p>form_factor <?=form_input('title','')?></p>
-		<p>is_mobile: <?=form_input('title','')?></p>
-		<p>id: <?=form_input('title','')?></p>
-		
-			<?=form_submit('submit', 'Publicar')?>
-
-
-		</div>-->
-
-		<div class="show_entries" >
-
-			<?php 
+	<div class="show_entries" >
+		<?php 
 
         // Include the autoloader - edit this path! 
-			require_once 'application/libraries/wurfl/src/autoload.php'; 
+		require_once 'application/libraries/wurfl/src/autoload.php'; 
         // Create a configuration object  
-			$config = new ScientiaMobile\WurflCloud\Config();  
+		$config = new ScientiaMobile\WurflCloud\Config();  
         // Set your WURFL Cloud API Key  
-			$config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
+		$config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
         // Create the WURFL Cloud Client  
-			$client = new ScientiaMobile\WurflCloud\Client($config);  
+		$client = new ScientiaMobile\WurflCloud\Client($config);  
         // Detect your device  
-			$client->detectDevice();  
+		$client->detectDevice();  
         // Use the capabilities  
-
 
         //Save device data
 
-			$complete_device_name = $client->getDeviceCapability('complete_device_name');
-			
-
-
-			$form_factor = $client->getDeviceCapability('form_factor');
-			
-
-			$is_mobile = $client->getDeviceCapability('is_mobile');
-			if ($is_mobile==true) {  
-				$is_mobile = " Dispositivo movil |";  
-			} else {  
-				$is_mobile = " Dispositivo no movil |";  
-			}
-
-			
-			?>
-
-		</div>
-
-	</body>
-	</html>
+		$complete_device_name = $client->getDeviceCapability('complete_device_name');
+		
+		$form_factor = $client->getDeviceCapability('form_factor');
+		
+		$is_mobile = $client->getDeviceCapability('is_mobile');
+		if ($is_mobile==true) {  
+			$is_mobile = " Dispositivo movil |";  
+		} else {  
+			$is_mobile = " Dispositivo no movil |";  
+		}			
+		?>
+	</div>
+</body>
+</html>

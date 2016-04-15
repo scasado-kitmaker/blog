@@ -33,7 +33,7 @@
         <!--Muestra los comentarios guardados en la base de datosm en caso de no existir muestra un mensaje-->
         <?php
         if(!empty($comments)){                        
-            echo '<h3>Comentarios</h3>';
+            echo '<h3>Comentarios:</h3>';
             foreach($comments as $comment)
                 echo $comment->comment.'<br />'.'<h4>Autor: '.$comment->author.'<br />'.
             ($comment->date).'</h4>'.'<hr class="style13" />';

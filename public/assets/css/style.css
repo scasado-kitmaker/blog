@@ -2,27 +2,19 @@
 body { 
  background: #EFEFEF;
  /* Añade color de fondo al body */
-
-
 }
 ::-webkit-scrollbar {
     width: 12px;
     background: #EFEFEF;
-
-
 }
 ::-webkit-scrollbar-thumb:hover {
-   background: #111;
-    
-}
- 
+   background: #111;    
+} 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-     display: none;
-    
+     display: none;    
 }
- 
-::-webkit-scrollbar-thumb {
+ ::-webkit-scrollbar-thumb {
      background: #333;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }

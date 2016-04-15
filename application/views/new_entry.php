@@ -55,7 +55,7 @@
     <div class="ui-widget">
       <p>Contenido:</p>
       <p><?=form_textarea('content','','class="editTextArea" placeholder="¡Escribe el contenido de tu entrada!"')?></p>
-
+      
       <div class="ui-widget">
         <p id="enviar">Etiquetas:<?=form_input('tags','',' placeholder="¡Separa las etiquetas con una coma!" id="tags"')?> </p>
         
@@ -64,7 +64,6 @@
           <p>is_mobile: <?=form_input('is_mobile',$is_mobile)?></p>   
           <p>form_factor: <?=form_input('form_factor',$form_factor)?></p>   
         </div>
-
       </div>
       <?=form_submit('submit', 'Publicar')?>
     </div>
@@ -72,5 +71,6 @@
     <div class="show_entries" id="div2" style="display: none">
       <p>Entrada publicada</p>
     </div>
+
 </body>
 </html>

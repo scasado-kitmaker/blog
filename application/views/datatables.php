@@ -96,8 +96,7 @@ en la base de datos
             });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar si
-     se muestra o no-->
+     <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar sise muestra o no-->
      <script>
         $(document).ready(function(){
             $("#div11").click(function(){
@@ -110,8 +109,7 @@ en la base de datos
             });
         });
     </script>  
-     <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si
-     se muestra o no-->
+     <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
      <script>
         $(document).ready(function(){
             $("#div13").click(function(){             
@@ -125,8 +123,7 @@ en la base de datos
             });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si
-     se muestra o no-->
+     <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
      <script>
         $(document).ready(function(){
             $("#div15").click(function(){
@@ -140,8 +137,7 @@ en la base de datos
         });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si
-     se muestra o no-->
+     <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si se muestra o no-->
      <script>
         $(document).ready(function(){
             $("#div16").click(function(){
@@ -153,16 +149,14 @@ en la base de datos
             $("#div22").fadeToggle();
         });
         });
-    </script>
-
+    </script>    
 </head>
 <body>
     <div class="show_entries" id="div0">
         <?php include('menu.php');?>
         <div  id="div11" >
             <h1>Usuarios
-                <img src="http://localhost/blog/public/assets/images/add.png" id="usuariosMas">
-                
+                <img src="http://localhost/blog/public/assets/images/add.png" id="usuariosMas">                
             </h1>
         </div>
 
@@ -255,7 +249,6 @@ en la base de datos
                     <?php else : ?>
                         <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
                     <?php endif; ?>
-
                 </tbody>
             </table>   
             <hr class="style13"/>  
@@ -377,7 +370,6 @@ en la base de datos
         // Use the capabilities  
 
         //Save device data
-
             $complete_device_name = $client->getDeviceCapability('complete_device_name');
             
             $form_factor = $client->getDeviceCapability('form_factor');

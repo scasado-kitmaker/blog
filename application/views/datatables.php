@@ -7,14 +7,14 @@ en la base de datos
 <head>
     <meta charset="utf-8">
     <title>View Entries</title> 
-     <!-- estilos-->
+    <!-- estilos-->
     <style type="text/css" class="init"></style>
     <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
     <link href='http://localhost/blog/public/assets/css/styleTables.css' rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
     <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">-->
-  
+
     <!--scripts-->
     <script type="text/javascript" src="/media/js/site.js?_=f612d6bab9a5a365a52445c40dd6b8c1">
     </script>
@@ -52,7 +52,7 @@ en la base de datos
         } );
 
     </script>
-        <!-- Código javascript para mostrar la tabla de wurfl cloud-->
+    <!-- Código javascript para mostrar la tabla de wurfl cloud-->
     <script type="text/javascript" class="init">
 
         $(document).ready(function() {
@@ -97,8 +97,8 @@ en la base de datos
         });
     </script>
      <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar si
-    se muestra o no-->
-    <script>
+     se muestra o no-->
+     <script>
         $(document).ready(function(){
             $("#div11").click(function(){
                 $("#div1").fadeToggle();            
@@ -111,8 +111,8 @@ en la base de datos
         });
     </script>  
      <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si
-    se muestra o no-->
-    <script>
+     se muestra o no-->
+     <script>
         $(document).ready(function(){
             $("#div13").click(function(){             
                 $("#div2").fadeToggle();
@@ -126,11 +126,11 @@ en la base de datos
         });
     </script>
      <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si
-    se muestra o no-->
-    <script>
+     se muestra o no-->
+     <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-               if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+             if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -141,11 +141,11 @@ en la base de datos
         });
     </script>
      <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si
-    se muestra o no-->
-    <script>
+     se muestra o no-->
+     <script>
         $(document).ready(function(){
             $("#div16").click(function(){
-               if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+             if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -207,50 +207,6 @@ en la base de datos
             <hr class="style13"/>  
         </div>
 
-        <div  id="div13">
-            <h1>Comentarios
-                <img src="http://localhost/blog/public/assets/images/add.png" id="comentariosMas">
-            </h1>
-        </div>
-        <!--Crea la estructura de la tabla comentarios-->
-        <div  id="div2" style="display: none">
-            <table id="comentarios" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>id_blog</th>
-                        <th>Autor</th>
-                        <th>comentario</th>                    
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>id</th>
-                        <th>id_blog</th>
-                        <th>Autor</th>
-                        <th>comentario</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <!--Si la variable $comments_datatables contiene datos los inserta en la tabla-->
-                    <?php if (!empty($comments_datatables)) : ?>
-                        <?php foreach($comments_datatables as $commentX) : ?>
-                            <tr>
-                                <td> <?=$commentX->id?></td>
-                                <td> <?=$commentX->id_blog?></td>
-                                <td> <?=$commentX->author?></td>
-                                <td> <?=$commentX->comment?></td>                
-                            </tr>
-                        <?php endforeach; ?>
-                    <!--En caso de no contener datos nos muestra el mensaje-->    
-                    <?php else : ?>
-                        <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
-                    <?php endif; ?>
-                </tbody>
-            </table>   
-            <hr class="style13"/>  
-        </div>
-
         <div  id="div15">
             <h1>Entradas
                 <img src="http://localhost/blog/public/assets/images/add.png" id="entradasMas">
@@ -282,7 +238,7 @@ en la base de datos
                     </tr>
                 </tfoot>
                 <tbody>
-                <!--Si la variable $entries_datatables contiene datos los inserta en la tabla-->
+                    <!--Si la variable $entries_datatables contiene datos los inserta en la tabla-->
                     <?php if (!empty($entries_datatables)) : ?>
                         <?php foreach($entries_datatables as $entriesX) : ?>
                             <tr>
@@ -295,7 +251,7 @@ en la base de datos
                                 <td> <?=$entriesX->tags?></td>            
                             </tr>
                         <?php endforeach; ?>
-                    <!--En caso de no contener datos nos muestra el mensaje-->  
+                        <!--En caso de no contener datos nos muestra el mensaje-->  
                     <?php else : ?>
                         <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
                     <?php endif; ?>
@@ -339,7 +295,7 @@ en la base de datos
                     </tr>
                 </tfoot>
                 <tbody>
-                <!--Si la variable $entries_datatables contiene datos los inserta en la tabla-->
+                    <!--Si la variable $entries_datatables contiene datos los inserta en la tabla-->
                     <?php if (!empty($wurfl_datatables)) : ?>
                         <?php foreach($wurfl_datatables as $wurflX) : ?>
                             <tr>
@@ -353,9 +309,53 @@ en la base de datos
                                 <td> <?=$wurflX->remote_host?></td>                                            
                             </tr>
                         <?php endforeach; ?>
-                    <!--En caso de no contener datos nos muestra el mensaje-->  
+                        <!--En caso de no contener datos nos muestra el mensaje-->  
                     <?php else : ?>
                         <h1 class="empty_entries">No existen datos,identificate con un dispositivo!</h1>
+                    <?php endif; ?>
+                </tbody>
+            </table>   
+            <hr class="style13"/>  
+        </div>
+
+          <div  id="div13">
+            <h1>Comentarios
+                <img src="http://localhost/blog/public/assets/images/add.png" id="comentariosMas">
+            </h1>
+        </div>
+        <!--Crea la estructura de la tabla comentarios-->
+        <div  id="div2" style="display: none">
+            <table id="comentarios" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>id_blog</th>
+                        <th>Autor</th>
+                        <th>comentario</th>                    
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>id</th>
+                        <th>id_blog</th>
+                        <th>Autor</th>
+                        <th>comentario</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <!--Si la variable $comments_datatables contiene datos los inserta en la tabla-->
+                    <?php if (!empty($comments_datatables)) : ?>
+                        <?php foreach($comments_datatables as $commentX) : ?>
+                            <tr>
+                                <td> <?=$commentX->id?></td>
+                                <td> <?=$commentX->id_blog?></td>
+                                <td> <?=$commentX->author?></td>
+                                <td> <?=$commentX->comment?></td>                
+                            </tr>
+                        <?php endforeach; ?>
+                        <!--En caso de no contener datos nos muestra el mensaje-->    
+                    <?php else : ?>
+                        <h1 class="empty_entries">No existen comentarios,escribe uno!</h1>
                     <?php endif; ?>
                 </tbody>
             </table>   

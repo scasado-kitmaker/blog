@@ -8,8 +8,7 @@
 	<link href="http://localhost/blog/public/assets/css/jquery.cookiebar.css" rel="stylesheet"/>
 	<!--Scripts-->
 	<script src="http://localhost/blog/public/assets/js/toastr.js"></script>	
-	<script type="text/javascript" src="<?=base_url()?>js/moment.js"></script>
-	<script type="text/javascript" src="/your-js-folder/jquery.js"></script> 
+	<script type="text/javascript" src="<?=base_url()?>public/assets/js/moment.js"></script>
 	<script type="text/javascript" src="http://localhost/blog/public/assets/js/jquery.cookiebar.js"></script> 
 	<script type="text/javascript"> 
 		$(document).ready(function(){

@@ -12,8 +12,7 @@ en la base de datos
     <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
     <link href='http://localhost/blog/public/assets/css/styleTables.css' rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
-    <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">
 
     <!--scripts-->
     <script type="text/javascript" src="/media/js/site.js?_=f612d6bab9a5a365a52445c40dd6b8c1">
@@ -164,7 +163,7 @@ en la base de datos
             <br/>
             <br/>
             <!--Crea la estructura de la tabla usuarios-->
-            <table id="usuarios" class="display" cellspacing="0" width="100%">
+            <table id="usuarios" class="dataTable" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>id</th>

@@ -86,8 +86,8 @@ en la base de datos
             });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar sise muestra o no-->
-     <script>
+    <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar sise muestra o no-->
+    <script>
         $(document).ready(function(){
             $("#div11").click(function(){
                 $("#div1").fadeToggle();            
@@ -99,8 +99,8 @@ en la base de datos
             });
         });
     </script>  
-     <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
-     <script>
+    <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
+    <script>
         $(document).ready(function(){
             $("#div13").click(function(){             
                 $("#div2").fadeToggle();
@@ -113,11 +113,11 @@ en la base de datos
             });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
-     <script>
+    <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
+    <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-             if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+               if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -127,11 +127,11 @@ en la base de datos
         });
         });
     </script>
-     <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si se muestra o no-->
-     <script>
+    <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si se muestra o no-->
+    <script>
         $(document).ready(function(){
             $("#div16").click(function(){
-             if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+               if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -301,7 +301,7 @@ en la base de datos
             <hr class="style13"/>  
         </div>
 
-          <div  id="div13">
+        <div  id="div13">
             <h1>Comentarios
                 <img src="http://localhost/blog/public/assets/images/add.png" id="comentariosMas">
             </h1>
@@ -343,29 +343,6 @@ en la base de datos
                 </tbody>
             </table>   
             <hr class="style13"/>  
-        </div>
-
-        <div class="show_entries" >
-            <?php 
-        // Include the autoloader - edit this path! 
-            require_once 'application/libraries/wurfl/src/autoload.php'; 
-        // Create a configuration object  
-            $config = new ScientiaMobile\WurflCloud\Config();  
-        // Set your WURFL Cloud API Key  
-            $config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
-        // Create the WURFL Cloud Client  
-            $client = new ScientiaMobile\WurflCloud\Client($config);  
-        // Detect your device  
-            $client->detectDevice();  
-        // Use the capabilities  
-
-        //Save device data
-            $complete_device_name = $client->getDeviceCapability('complete_device_name');
-            
-            $form_factor = $client->getDeviceCapability('form_factor');
-
-            $is_mobile = $client->getDeviceCapability('is_mobile');
-            ?>
         </div>
     </div>
     <!-- Crea un boton que usaremos para mostrar todas las tablas-->

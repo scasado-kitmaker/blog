@@ -79,17 +79,11 @@
 
 				}	
 
-				if ($this->session->userdata('is_logged_in'))
-				
+				if ($this->session->userdata('is_logged_in'))				
 					echo  anchor(base_url().'index.php/users/logout/','Hola, '.$this->session->userdata('name'). ' logout ');
-
-
-
 				elseif (!$this->session->userdata('is_logged_in') && ($this->uri->segment(2) == 'signin' || $this->uri->segment(2) == 'principal'))
-					
 					echo anchor(base_url().'index.php/users/signup/',' Registrate ','class="'.$varVerde6.'"');
-				else
-		
+				else		
 					echo anchor(base_url().'index.php/users/signin/',' Identificate ' ,'class="'.$varVerde7.'"');
 				?>
 			</li>
@@ -102,6 +96,7 @@
 					echo ' ';
 				?>
 			</li>
+
 			<li>
 				<?php
 				echo anchor(base_url().' ',' Todas las entradas ','class="'.$varVerde3.'"');
@@ -109,12 +104,14 @@
 					echo ' ';	
 				?>
 			</li>
+
 			<li>
 				<?php
 				if ($this->session->userdata('is_logged_in'))					
 					echo anchor(base_url().'index.php/blog/MyEntries/',' Mis entradas ','class="'.$varVerde4.'"');
 				?>
 			</li>
+
 			<li>
 				<?php
 				if ($this->session->userdata('name')=='admin') {
@@ -122,9 +119,7 @@
 				}
 				?>
 			</li>
-
-		</ul>
-		
+		</ul>		
 	</div>
 	<hr class="style13"/>
 </body>

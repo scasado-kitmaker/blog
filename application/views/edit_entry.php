@@ -10,9 +10,9 @@
 </head>
 <body>
 	<div class="show_entries">
-	<!--Inserta la vista que contiene el menu principal-->
+		<!--Inserta la vista que contiene el menu principal-->
 		<?php include('menu.php'); 		
-		$hidden = array('id' => $entry_data->id);
+			$hidden = array('id' => $entry_data->id);
 		?>
 		<!--Formulario para introducir editar la entrada-->
 		<?=form_open(base_url().'index.php/blog/update_entry/', '', $hidden)?>

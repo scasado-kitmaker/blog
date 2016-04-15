@@ -29,7 +29,6 @@
                 <?=form_submit('submit','Enviar ')?>
                 <?=form_close()?>
             </div>
-
         <?php endif; ?>
         <!--Muestra los comentarios guardados en la base de datosm en caso de no existir muestra un mensaje-->
         <?php
@@ -43,6 +42,5 @@
             echo '<h3>No existen comentarios.</h3>';
         ?>
     </div>
-
 </body>
 </html>

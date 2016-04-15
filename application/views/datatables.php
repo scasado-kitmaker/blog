@@ -29,37 +29,28 @@ en la base de datos
     </script>
     <!-- Código javascript para mostrar la tabla usuarios-->
     <script type="text/javascript" class="init">
-
         $(document).ready(function() {
             $('#usuarios').DataTable();
         } );
-
     </script>
     <!-- Código javascript para mostrar la tabla comentarios-->
     <script type="text/javascript" class="init">
-
         $(document).ready(function() {
             $('#comentarios').DataTable();
         } );
-
     </script>
     <!-- Código javascript para mostrar la tabla entradas-->
     <script type="text/javascript" class="init">
-
         $(document).ready(function() {
             $('#entradas').DataTable();
         } );
-
     </script>
     <!-- Código javascript para mostrar la tabla de wurfl cloud-->
     <script type="text/javascript" class="init">
-
         $(document).ready(function() {
             $('#wurfl').DataTable();
         } );
-
     </script>
-
     <!-- Código javascript para realizar un fadeToggle a  los div de las  tablas y cambiar la imagen que se mostrara para indicar si
     se muestra o no-->
     <script>

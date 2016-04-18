@@ -6,7 +6,7 @@ class Blog extends CI_Controller {
         date_default_timezone_set('Europe/Madrid');
 
         $this->load->model('blog_model');    
-        $this->output->enable_profiler(TRUE);
+        //$this->output->enable_profiler(TRUE);
            
     }
 //Carga las entradas y las envia a la vista show_entries para mostrarlas

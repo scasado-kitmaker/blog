@@ -24,7 +24,7 @@
 		<p>Imagen:</p>
 		<p ><?=form_input ('image', $entry_data->image)?></p>
 		<p>Contenido:</p>
-		<p ><?=form_textarea ('content', $entry_data->content,'class="editTextArea"')?></p>
+		<!--<p ><?=form_textarea ('content', $entry_data->content,'class="editTextArea"')?></p>-->
 		<p>Etiquetas: <?=form_input('tags', $entry_data->tags)?> (Separadas por coma)</p>
 		<?=form_submit('submit', 'Actualizar')?>
 	</div>

@@ -20,7 +20,7 @@
 		<!--Formulario para  editar la entrada-->
 		<?=form_open(base_url().'index.php/blog/update_entry/', '', $hidden)?>
 		<p>Título: <?=form_input('title', $entry_data->title)?></p>
-		<?php echo $this->ckeditor->editor("content",$entry_data->content);?>
+		<?php echo $this->ckeditor->editor("content",$entry_data->content,"class='editTextArea'");?>
 		<p>Imagen:</p>
 		<p ><?=form_input ('image', $entry_data->image)?></p>
 		<p>Contenido:</p>

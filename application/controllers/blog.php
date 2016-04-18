@@ -5,7 +5,9 @@ class Blog extends CI_Controller {
         parent::__construct();
         date_default_timezone_set('Europe/Madrid');
 
-        $this->load->model('blog_model');               
+        $this->load->model('blog_model');    
+        $this->output->enable_profiler(TRUE);
+           
     }
 //Carga las entradas y las envia a la vista show_entries para mostrarlas
 public function index(){

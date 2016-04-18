@@ -119,10 +119,11 @@
 				?>
 			</li>
 		</ul>	
-		<?php 
+		<!--<?php 
 		echo $this->benchmark->memory_usage(); 
 		echo '<br/>';
-		echo $this->benchmark->elapsed_time();      ?>	
+		echo $this->benchmark->elapsed_time();
+		?>-->	
 	</div>
 	<hr class="style13"/>
 </body>

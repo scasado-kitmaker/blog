@@ -352,6 +352,7 @@ en la base de datos
     <!-- Crea un boton que usaremos para ocultar todas las tablas-->
     <div id="div17" class="show_entries" style="display: none">
         <button class="button1Datatables">Ocultar</button>
-    </div>   
+    </div> 
+      
 </body>
 </html>

@@ -1,0 +1,2 @@
+Si se intenta acceder a wurfl cloud usando alguna extensión para suplantar el useragente del navegador wurfl no identificara el nuevo useragente,
+para que lo identifique se deben de borrar primero la cookies del sitio.

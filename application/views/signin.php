@@ -12,33 +12,7 @@
 		<!--Inserta la vista que contiene el menu principal-->
 		<?php include('menu.php');?>
 		<!--Obtiene datos del dispositivo mediante wurfl cloud-->
-		<div>
-			<?php 
-        // Include the autoloader - edit this path! 
-			require_once 'application/libraries/wurfl/src/autoload.php'; 
-        // Create a configuration object  
-			$config = new ScientiaMobile\WurflCloud\Config();  
-        // Set your WURFL Cloud API Key  
-			$config->api_key = '397728:S6QuwXZeQhQkXxyeHnWBIRwWHA7HVCxh';   
-        // Create the WURFL Cloud Client  
-			$client = new ScientiaMobile\WurflCloud\Client($config);  
-        // Detect your device  
-			$client->detectDevice();  
-			
-        //Save device data
-			$complete_device_name = $client->getDeviceCapability('complete_device_name');			
-
-			$form_factor = $client->getDeviceCapability('form_factor');
-			
-			$is_mobile = $client->getDeviceCapability('is_mobile');
-			if ($is_mobile==true) {  
-				$is_mobile = " Dispositivo movil";  
-			} else {  
-				$is_mobile = " Dispositivo no movil";  
-			}			
-			?>
-		</div>
-
+		
 		<?=form_open(base_url().'index.php/users/validate/')?>
 		<!--Muestra un toast en caso de que los datos sea incorrectos-->
 		<?php echo (isset($error)) ? '<script type="text/javascript">Command: toastr["error"]("Los datos introducidos son incorrectos", "Aviso")

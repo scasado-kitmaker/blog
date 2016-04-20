@@ -12,45 +12,44 @@ en la base de datos
     <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
     <link href='http://localhost/blog/public/assets/css/styleTables.css' rel='stylesheet' type='text/css' />
     <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" type="text/css" href="<http://localhost/blog/public/assets/css/dataTables.jqueryui.min.css">
 
-    <!--scripts-->
-    <script type="text/javascript" src="/media/js/site.js?_=f612d6bab9a5a365a52445c40dd6b8c1">
+    <!--scripts-->   
+    <script type="text/javascript" language="javascript" src="http://localhost/blog/public/assets/js/jquery-1.12.0.min.js">
     </script>
-    <script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fstyling%2FjqueryUI.html" async>
+    <script type="text/javascript" language="javascript" src="http://localhost/blog/public/assets/js/jquery.dataTables.min.js">
     </script>
-    <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.0.min.js">
+    <script type="text/javascript" language="javascript" src="http://localhost/blog/public/assets/js/dataTables.jqueryui.min.js">
     </script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js">
-    </script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.jqueryui.min.js">
-    </script>
-    <script type="text/javascript" language="javascript" src="../resources/demo.js">
-    </script>
+
     <!-- Código javascript para mostrar la tabla usuarios-->
     <script type="text/javascript" class="init">
         $(document).ready(function() {
             $('#usuarios').DataTable();
         } );
     </script>
+
     <!-- Código javascript para mostrar la tabla comentarios-->
     <script type="text/javascript" class="init">
         $(document).ready(function() {
             $('#comentarios').DataTable();
         } );
     </script>
+
     <!-- Código javascript para mostrar la tabla entradas-->
     <script type="text/javascript" class="init">
         $(document).ready(function() {
             $('#entradas').DataTable();
         } );
     </script>
+
     <!-- Código javascript para mostrar la tabla de wurfl cloud-->
     <script type="text/javascript" class="init">
         $(document).ready(function() {
             $('#wurfl').DataTable();
         } );
     </script>
+
     <!-- Código javascript para realizar un fadeToggle a  los div de las  tablas y cambiar la imagen que se mostrara para indicar si
     se muestra o no-->
     <script>
@@ -86,6 +85,7 @@ en la base de datos
             });
         });
     </script>
+
     <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar sise muestra o no-->
     <script>
         $(document).ready(function(){
@@ -98,7 +98,8 @@ en la base de datos
                 }
             });
         });
-    </script>  
+    </script> 
+
     <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
         $(document).ready(function(){
@@ -113,11 +114,12 @@ en la base de datos
             });
         });
     </script>
+
     <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-               if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+             if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -127,11 +129,12 @@ en la base de datos
         });
         });
     </script>
+
     <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
         $(document).ready(function(){
             $("#div16").click(function(){
-               if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+             if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -353,6 +356,6 @@ en la base de datos
     <div id="div17" class="show_entries" style="display: none">
         <button class="button1Datatables">Ocultar</button>
     </div> 
-      
+
 </body>
 </html>

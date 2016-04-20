@@ -6,15 +6,13 @@
   <!--Estilos-->
   <link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>   
   <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="http://localhost/blog/public/assets/css/jquery-ui.css">
   <!--Scripts-->
   <script src="http://localhost/blog/public/assets/js/jquery-2.2.3.js"></script>
   <script src="http://localhost/blog/public/assets/js/test.js"></script>
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="http://localhost/blog/public/assets/js/jquery-1.10.2.js"></script>
+  <script src="http://localhost/blog/public/assets/js/jquery-ui.js"></script>
   <script src='http://localhost/blog/public/tinymce/js/tinymce/tinymce.min.js'></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-
   <script src='http://localhost/blog/public/tinymce/js/tinymce/plugins/placeholder/plugin.js'></script>
   <script type="text/javascript">
     tinymce.init({
@@ -73,17 +71,11 @@
           <p>complete_device_name: <?=form_input('complete_device_name',$complete_device_name)?></p>   
           <p>is_mobile: <?=form_input('is_mobile',$is_mobile)?></p>   
           <p>form_factor: <?=form_input('form_factor',$form_factor)?></p>  
-
-
         </div>
       </div>
-      <div class="g-recaptcha" data-sitekey="6LdKSh0TAAAAAK_VyEn0aL8P1Tvfz24MDpB7IQ2R"></div>
-      <?=form_submit('submit', 'Publicar')?>
-    </div>
-
-    <div class="show_entries" id="div2" style="display: none">
-      <p>Entrada publicada</p>
-    </div>
-
-  </body>
-  </html>
+        <?=form_submit('submit', 'Publicar')?>
+      <div class="show_entries" id="div2" style="display: none">
+        <p>Entrada publicada</p>
+      </div>
+    </body>
+    </html>

@@ -14,6 +14,6 @@
          $this->output->enable_profiler(FALSE); 
          $this->load->view('test'); 
       }
-		
+      		
    } 
 ?>  

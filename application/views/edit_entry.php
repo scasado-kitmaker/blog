@@ -7,15 +7,12 @@
 	<link rel="shortcut icon" type="image/ico" href="http://localhost/blog/public/assets/images/favicon.ico"/>
 	<!--Estilos-->
 	<link href='http://localhost/blog/public/css/style.css' rel='stylesheet' type='text/css' />
-	<!--<script type="text/javascript" src="http://localhost/blog/public/assets/ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="http://localhost/blog/public/assets/ckfinder/ckfinder.js"></script>-->
 	<script src='http://localhost/blog/public/tinymce/js/tinymce/tinymce.min.js'></script>
 	<script type="text/javascript">
 		tinymce.init({
 			selector: "textarea"
 		});
 	</script>
-
 </head>
 <body>
 	<div class="show_entries">

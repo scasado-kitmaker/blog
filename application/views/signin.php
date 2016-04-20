@@ -15,7 +15,7 @@
 		
 		<?=form_open(base_url().'index.php/users/validate/')?>
 		<!--Muestra un toast en caso de que los datos sea incorrectos-->
-		<?php echo (isset($error)) ? '<script type="text/javascript">Command: toastr["error"]("Los datos introducidos son incorrectos", "Aviso")
+		<?php echo (isset($error)) ? '<script type="text/javascript">
 
 		toastr.options = {
 			"closeButton": true,
@@ -33,7 +33,9 @@
 			"hideEasing": "linear",
 			"showMethod": "fadeIn",
 			"hideMethod": "fadeOut"
-		}</script>' 
+		}
+		Command: toastr["error"]("Los datos introducidos son incorrectos", "Aviso")
+		</script>' 
 		: '';?>
 		<p>Usuario: <?=form_input('username','','placeholder="Usuario"')?></p>   
 		<p>Contraseña: <?=form_password('password','','placeholder="Contraseña"')?></p>

@@ -3,7 +3,7 @@
  
    <head> 
       <meta charset = "utf-8"> 
-      <title>CodeIgniter View Example</title> 
+      <title>CodeIgniter Benchmark</title> 
    </head>
 	
    <body> 

@@ -6,7 +6,7 @@ en la base de datos
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>View Entries</title> 
+    <title>Tablas de datos</title> 
     <!-- estilos-->
     <style type="text/css" class="init"></style>
     <link href='http://localhost/blog/public/assets/css/style.css' rel='stylesheet' type='text/css' />
@@ -119,7 +119,7 @@ en la base de datos
     <script>
         $(document).ready(function(){
             $("#div15").click(function(){
-             if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+               if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/add.png");
@@ -134,7 +134,7 @@ en la base de datos
     <script>
         $(document).ready(function(){
             $("#div16").click(function(){
-             if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
+               if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/add.png");

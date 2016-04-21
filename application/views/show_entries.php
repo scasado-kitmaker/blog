@@ -14,11 +14,13 @@
         <?php if (!empty($entries)) : ?>
           <?php foreach($entries as $entry) : ?>
             <?php 
-            if (isset($my_entries) && in_array($entry->id, $my_entries)) {
+            if (isset($my_entries) && in_array($entry->id, $my_entries))
+            {
 
                 $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
                 $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
-            } elseif ($this->session->userdata('name')=='admin') {
+            } elseif ($this->session->userdata('name')=='admin')
+            {
                 $edit   = '<img  src="http://localhost/blog/public/assets/images/edit.png">'; 
                 $delete = '<img  src="http://localhost/blog/public/assets/images/delete.png">';
             }

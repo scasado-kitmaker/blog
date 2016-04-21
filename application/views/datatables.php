@@ -31,21 +31,24 @@ en la base de datos
 
     <!-- Código javascript para mostrar la tabla comentarios-->
     <script type="text/javascript" class="init">
-        $(document).ready(function() {
+        $(document).ready(function() 
+        {
             $('#comentarios').DataTable();
         } );
     </script>
 
     <!-- Código javascript para mostrar la tabla entradas-->
     <script type="text/javascript" class="init">
-        $(document).ready(function() {
+        $(document).ready(function()
+        {
             $('#entradas').DataTable();
         } );
     </script>
 
     <!-- Código javascript para mostrar la tabla de wurfl cloud-->
     <script type="text/javascript" class="init">
-        $(document).ready(function() {
+        $(document).ready(function()
+        {
             $('#wurfl').DataTable();
         } );
     </script>
@@ -53,8 +56,10 @@ en la base de datos
     <!-- Código javascript para realizar un fadeToggle a  los div de las  tablas y cambiar la imagen que se mostrara para indicar si
     se muestra o no-->
     <script>
-        $(document).ready(function(){
-            $("button").click(function(){
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
                 $("#div1").fadeToggle();
                 $("#div2").fadeToggle();
                 $("#div3").fadeToggle();
@@ -88,8 +93,10 @@ en la base de datos
 
     <!-- Código javascript para realizar un fadeToggle al div de la tabla usuarios y cambiar la imagen que se mostrara para indicar sise muestra o no-->
     <script>
-        $(document).ready(function(){
-            $("#div11").click(function(){
+        $(document).ready(function()
+        {
+            $("#div11").click(function()
+            {
                 $("#div1").fadeToggle();            
                 if ( $('#usuariosMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                     $('#usuariosMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
@@ -102,8 +109,10 @@ en la base de datos
 
     <!-- Código javascript para realizar un fadeToggle al div de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
-        $(document).ready(function(){
-            $("#div13").click(function(){             
+        $(document).ready(function()
+        {
+            $("#div13").click(function()
+            {             
                 $("#div2").fadeToggle();
                 if ( $('#comentariosMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                     $('#comentariosMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
@@ -117,8 +126,10 @@ en la base de datos
 
     <!-- Código javascript para realizar un fadeToggle a  al de de la tabla comentarios y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
-        $(document).ready(function(){
-            $("#div15").click(function(){
+        $(document).ready(function()
+        {
+            $("#div15").click(function()
+            {
                if ( $('#entradasMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#entradasMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {
@@ -132,8 +143,10 @@ en la base de datos
 
     <!-- Código javascript para realizar un fadeToggle a  al div de de la tabla wurfl datos y cambiar la imagen que se mostrara para indicar si se muestra o no-->
     <script>
-        $(document).ready(function(){
-            $("#div16").click(function(){
+        $(document).ready(function()
+        {
+            $("#div16").click(function()
+            {
                if ( $('#wurflMas').attr("src") == "http://localhost/blog/public/assets/images/add.png") {
                 $('#wurflMas').attr("src","http://localhost/blog/public/assets/images/remove.png");
             } else {

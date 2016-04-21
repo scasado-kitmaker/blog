@@ -11,7 +11,8 @@
 	<script type="text/javascript" src="http://localhost/blog/public/assets/js/moment.js"></script>
 	<script type="text/javascript" src="http://localhost/blog/public/assets/js/jquery.cookiebar.js"></script> 
 	<script type="text/javascript"> 
-		$(document).ready(function(){
+		$(document).ready(function()
+		{
 			$.cookieBar();
 		});
 	</script>
